@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import firebase from 'firebase/app';
+import './fonts/Roboto-Regular.ttf'; 
 
 firebase.initializeApp({
   apiKey: 'AIzaSyBOoRF94KTVva5_tvyHh5wN--fYvgBOEuw',

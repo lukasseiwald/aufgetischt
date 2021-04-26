@@ -82,12 +82,6 @@ class Form extends React.Component {
     this.refs.age.value = developer.age;
   };
 
-  // onChangeGender = developer => {
-  //   console.log("test")
-  //   console.log(developer.gender)
-  //   this.refs.gender.value = developer.gender;
-  // }
-
   onChangeGender(event) {
     this.refs.gender.value = event.target.value
     // console.log(event.target.value);
@@ -113,51 +107,53 @@ class Form extends React.Component {
                     <textarea
                       type='text'
                       ref='opinion'
-                      maxLength='30'
+                      maxLength='45'
                       className='form-control'
                       placeholder='Red nicht lange um den heißen Brei. Bring deine Meinung in 30 Zeichen auf den Punkt.'
                     />
                   </div>
                 </div>
-                <div className="bottom-form">
-                  <div className='form-group col-md-6' ref='gender' onChange={this.onChangeGender}>
-                    <input
-                      type='radio'
-                      name='gender'
-                      value='m'
-                      id='radio-m'
-                      className='radioButton'
-                    />
-                    <label for='radio-m'>M</label>
-                    <input
-                      type='radio'
-                      name='gender'
-                      value='f'
-                      id='radio-f'
-                      className='radioButton'
-                    />
-                    <label for='radio-f'>F</label>
-                    <input
-                      type='radio'
-                      name='gender'
-                      value='o'
-                      id='radio-o'
-                      className='radioButton'
-                    />
-                    <label for='radio-o'>O</label>
+                <div className='bottom-form'>
+                  <div className='form-group bottom-form-row-1'>
+                    <div className='col-md-6' ref='gender' onChange={this.onChangeGender}>
+                      <input
+                        type='radio'
+                        name='gender'
+                        value='m'
+                        id='radio-m'
+                        className='radioButton'
+                      />
+                      <label for='radio-m'>M</label>
+                      <input
+                        type='radio'
+                        name='gender'
+                        value='f'
+                        id='radio-f'
+                        className='radioButton'
+                      />
+                      <label for='radio-f'>F</label>
+                      <input
+                        type='radio'
+                        name='gender'
+                        value='o'
+                        id='radio-o'
+                        className='radioButton'
+                      />
+                      <label for='radio-o'>O</label>
+                    </div>
+                    <div className='col-md-6 input-age'>
+                      <label>AGE:</label>
+                      <input
+                        type='number'
+                        ref='age'
+                        className='form-control'
+                        placeholder='...'
+                        min='16'
+                        max='99'
+                      />
+                    </div>
                   </div>
-                  <div className='form-group col-md-6 input-age'>
-                    <label>AGE:</label>
-                    <input
-                      type='number'
-                      ref='age'
-                      className='form-control'
-                      placeholder='...'
-                      min='16'
-                      max='99'
-                    />
-                  </div>
-                  <button type='submit' className='btn btn-primary button-submit'>
+                  <button type='submit' className='btn btn-primary button-submit form-group'>
                     SUBMIT
                   </button>
                 </div>
