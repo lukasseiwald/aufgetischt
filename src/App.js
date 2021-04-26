@@ -9,7 +9,9 @@ function App() {
 
   return (
     <div className="App">
-      <Form />
+      <div className="section-hero">
+        <Form />
+      </div>
     </div>
   );
 }

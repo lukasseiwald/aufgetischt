@@ -1,0 +1,103 @@
+form {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1em;
+  border-bottom: 1px solid #333;
+}
+
+#form-title {
+  font-weight: 400;
+  font-size: 2em;
+  margin: 0;
+  padding-bottom: 5px;
+}
+
+.bottom-form {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  padding: 1.5em 0em;
+}
+
+textarea {
+  border: none;
+  width: 24em;
+  height: 12em;
+  font-size: 1.5em;
+  outline: none;
+  font-family: 'Roboto';
+}
+
+/* Radio Button */
+input[type="radio"] {
+  position: relativ;
+  display: none;
+}
+
+input[type="radio"] + label {
+  width: 45px;
+  height: 45px;
+  margin: 5px;
+  padding: 10px 13px;
+  border-radius: 40px;
+  border: 2px solid #333;
+  color: #333;
+  position: relative;
+  font-size: 1.2em;
+}
+
+input[type="radio"]#radio-f + label {
+  padding: 10px 16px;
+}
+
+/*hover, checked, focus*/
+
+input[type="radio"]:hover + label,
+input[type="radio"]:checked + label,
+input[type="radio"]:focus + label{
+  cursor: pointer;
+  border-color: rgb(193, 70, 193);
+  color: rgb(193, 70, 193);
+}
+
+.input-age {
+  border: 2px solid rgb(193, 70, 193);
+  color: rgb(193, 70, 193);
+  margin: -11px 0.5em;
+  padding: 0px 13px;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 43px;
+}
+
+.input-age input {
+  border: none;
+  width: 4em;
+  padding: 0.5em;
+  outline: none;
+}
+
+.button-submit {
+  width: 100%;
+  background-color: transparent;
+  border: 2px solid rgb(193, 70, 193);
+  color: rgb(193, 70, 193);
+  margin: -11px 0.5em;
+  padding: 0px 13px;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 43px;
+  outline: none;
+  cursor: pointer;
+}
+
+.button-submit:focus {
+  background-color: rgb(193, 70, 193);
+  color: white;
+}

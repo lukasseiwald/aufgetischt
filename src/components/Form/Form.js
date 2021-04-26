@@ -1,5 +1,6 @@
 import React from 'react';
 import Firebase from 'firebase';
+import './Form.css';
 
 class Form extends React.Component {
   constructor(props) {
@@ -101,10 +102,14 @@ class Form extends React.Component {
             <div className='col-xl-12'>
               <h1></h1>
               <form onSubmit={this.handleSubmit}>
+                <p id='form-title'>aufgetischt:</p>
                 <div className='form-row'>
                   <input type='hidden' ref='uid' />
-                  <div className='form-group col-md-6'>
-                    <label>aufgetischt:</label>
+                  {/* <div className='form-group col-md-6'>
+                    <label>WÄHLE DEIN THEMA:</label>
+                    
+                  </div> */}
+                  <div className='form-group col-md-6 text-area'>
                     <textarea
                       type='text'
                       ref='opinion'
@@ -113,24 +118,49 @@ class Form extends React.Component {
                       placeholder='Red nicht lange um den heißen Brei. Bring deine Meinung in 30 Zeichen auf den Punkt.'
                     />
                   </div>
+                </div>
+                <div className="bottom-form">
                   <div className='form-group col-md-6' ref='gender' onChange={this.onChangeGender}>
-                    <input type="radio" name="gender" value="m" /> M
-                    <input type="radio" name="gender" value="f" /> F
-                    <input type="radio" name="gender" value="o" /> O
+                    <input
+                      type='radio'
+                      name='gender'
+                      value='m'
+                      id='radio-m'
+                      className='radioButton'
+                    />
+                    <label for='radio-m'>M</label>
+                    <input
+                      type='radio'
+                      name='gender'
+                      value='f'
+                      id='radio-f'
+                      className='radioButton'
+                    />
+                    <label for='radio-f'>F</label>
+                    <input
+                      type='radio'
+                      name='gender'
+                      value='o'
+                      id='radio-o'
+                      className='radioButton'
+                    />
+                    <label for='radio-o'>O</label>
                   </div>
-                  <div className='form-group col-md-6'>
-                    <label>Age:</label>
+                  <div className='form-group col-md-6 input-age'>
+                    <label>AGE:</label>
                     <input
                       type='number'
                       ref='age'
                       className='form-control'
-                      placeholder='Age'
+                      placeholder='...'
+                      min='16'
+                      max='99'
                     />
                   </div>
+                  <button type='submit' className='btn btn-primary button-submit'>
+                    SUBMIT
+                  </button>
                 </div>
-                <button type='submit' className='btn btn-primary'>
-                  Submit
-                </button>
               </form>
             </div>
           </div>
