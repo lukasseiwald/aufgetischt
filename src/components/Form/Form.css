@@ -37,8 +37,10 @@ textarea {
   height: 5em;
   font-size: 2.2em;
   outline: none;
-  font-family: 'Roboto-Regular';
+  font-family: 'Roboto-Light';
+  font-weight: 300;
   color: rgb(193, 70, 193);
+  resize: none;
 }
 
 .bottom-form-row-1 {
@@ -49,6 +51,7 @@ textarea {
 @media only screen and (max-width: 600px) {
   textarea {
     height: 6em;
+    width: 100%;
     font-size: 1.6em;
   }
 
@@ -83,6 +86,10 @@ input[type="radio"]#radio-f + label {
   padding: 10px 16px;
 }
 
+input[type="radio"]#radio-d + label {
+  padding: 10px 15px;
+}
+
 /*hover, checked, focus*/
 
 input[type="radio"]:hover + label,
@@ -97,7 +104,8 @@ input[type="radio"]:focus + label{
   border: 2px solid rgb(193, 70, 193);
   color: rgb(193, 70, 193);
   margin: -11px 0.5em;
-  padding: 0px 13px;
+  padding-left: 13px;
+  padding-right: 0;
   border-radius: 40px;
   display: flex;
   align-items: center;
@@ -107,8 +115,11 @@ input[type="radio"]:focus + label{
 
 .input-age input {
   border: none;
-  width: 4em;
+  width: 2em;
+  border-radius: 22em;
   padding: 0.5em;
+  color: rgb(193, 70, 193);
+  font-size: 1.2em;
   outline: none;
 }
 

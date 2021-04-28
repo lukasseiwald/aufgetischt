@@ -7,7 +7,7 @@ class Form extends React.Component {
     super(props);
 
     this.state = {
-      developers: []
+      opinions: []
     };
     this.onChangeGender = this.onChangeGender.bind(this);
   }
@@ -39,47 +39,47 @@ class Form extends React.Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    let opinion = this.refs.opinion.value;
-    let gender = this.refs.gender.value;
+    let text = this.refs.text.value;
+    let gender = this.refs.gender.value || '-' ;
     console.log(this.refs.gender.value)
-    let age = this.refs.age.value;
+    let age = this.refs.age.value || '-' ;
     let uid = this.refs.uid.value;
 
-    if (uid && opinion && age && gender) {
-      const { developers } = this.state;
-      const devIndex = developers.findIndex(data => {
+    if (uid && text && age && gender) {
+      const { opinions } = this.state;
+      const index = opinions.findIndex(data => {
         return data.uid === uid;
       });
-      developers[devIndex].opinion = opinion;
-      developers[devIndex].gender = gender;
-      developers[devIndex].age = age;
-      this.setState({ developers });
-    } else if (opinion && age && gender) {
+      opinions[index].text = text;
+      opinions[index].gender = gender;
+      opinions[index].age = age;
+      this.setState({ opinions });
+    } else if (text && age && gender) {
       const uid = new Date().getTime().toString();
-      const { developers } = this.state;
-      developers.push({ uid, opinion, gender, age });
-      this.setState({ developers });
+      const { opinions } = this.state;
+      opinions.push({ uid, text, gender, age });
+      this.setState({ opinions });
     }
 
-    this.refs.opinion.value = '';
+    this.refs.text.value = '';
     this.refs.gender.value = '';
     this.refs.age.value = '';
     this.refs.uid.value = '';
   };
 
-  removeData = developer => {
-    const { developers } = this.state;
-    const newState = developers.filter(data => {
-      return data.uid !== developer.uid;
+  removeData = opinion => {
+    const { opinions } = this.state;
+    const newState = opinions.filter(data => {
+      return data.uid !== opinion.uid;
     });
-    this.setState({ developers: newState });
+    this.setState({ opinions: newState });
   };
 
-  updateData = developer => {
-    this.refs.uid.value = developer.uid;
-    this.refs.opinion.value = developer.opinion;
-    this.refs.gender.value = developer.gender;
-    this.refs.age.value = developer.age;
+  updateData = opinion => {
+    this.refs.uid.value = opinion.uid;
+    this.refs.text.value = opinion.text;
+    this.refs.gender.value = opinion.gender;
+    this.refs.age.value = opinion.age;
   };
 
   onChangeGender(event) {
@@ -88,7 +88,7 @@ class Form extends React.Component {
   }
 
   render() {
-    const { developers } = this.state;
+    const { opinions } = this.state;
     return (
       <React.Fragment>
         <div className='container'>
@@ -106,10 +106,11 @@ class Form extends React.Component {
                   <div className='form-group col-md-6 text-area'>
                     <textarea
                       type='text'
-                      ref='opinion'
+                      ref='text'
                       maxLength='45'
                       className='form-control'
-                      placeholder='Red nicht lange um den heißen Brei. Bring deine Meinung in 30 Zeichen auf den Punkt.'
+                      required
+                      placeholder='Red nicht lange um den heißen Brei. \n Bring deine Meinung in 30 Zeichen auf den Punkt.'
                     />
                   </div>
                 </div>
@@ -135,11 +136,11 @@ class Form extends React.Component {
                       <input
                         type='radio'
                         name='gender'
-                        value='o'
-                        id='radio-o'
+                        value='d'
+                        id='radio-d'
                         className='radioButton'
                       />
-                      <label for='radio-o'>O</label>
+                      <label for='radio-d'>D</label>
                     </div>
                     <div className='col-md-6 input-age'>
                       <label>AGE:</label>
@@ -169,18 +170,18 @@ class Form extends React.Component {
           </div>
           <div className='row'>
             <div className='col-xl-12'>
-              {developers.map(developer => (
+              {opinions.map(opinion => (
                 <div
-                  key={developer.uid}
+                  key={opinion.uid}
                   className='card float-left'
                   style={{ width: '18rem', marginRight: '1rem' }}
                 >
                   <div className='card-body'>
-                    <h5 className='card-title'>{developer.opinion}</h5>
-                    <p className='card-text'>{developer.gender}</p>
-                    <p className='card-text'>{developer.age}</p>
+                    <h5 className='card-title'>{opinion.text}</h5>
+                    <p className='card-text'>{opinion.gender}</p>
+                    <p className='card-text'>{opinion.age}</p>
                     <button
-                      onClick={() => this.removeData(developer)}
+                      onClick={() => this.removeData(opinion)}
                       className='btn btn-link'
                     >
                       Delete

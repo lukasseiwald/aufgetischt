@@ -2,6 +2,10 @@
   font-family: 'Roboto-Regular';
 }
 
+.header {
+  height: 6em;
+}
+
 .section-hero {
   display: flex;
   justify-content: center;
