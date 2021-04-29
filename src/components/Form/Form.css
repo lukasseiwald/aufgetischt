@@ -1,7 +1,7 @@
 .container {
-  font-family: 'Roboto-Regular';
-  width: 70%;
-  max-width: 40em;
+  font-family: 'Acumin-Light';
+  width: 80%;
+  max-width: 70em;
 }
 
 form {
@@ -13,11 +13,19 @@ form {
   border-bottom: 1px solid #333;
 }
 
+.title-category {
+  font-size: 1.4em;
+  text-transform: uppercase;
+  padding-left: 0.2em;
+  margin: 0;
+}
+
 #form-title {
-  font-weight: 400;
-  font-size: 2em;
+  font-weight: 600;
+  font-size: 3em;
   margin: 0;
   padding-bottom: 5px;
+  padding-left: 0.1em;
 }
 
 .bottom-form {
@@ -31,14 +39,23 @@ form {
   width: 100%;
 }
 
+.form-categories {
+  padding-top: 1em;
+  padding-bottom: 4em;
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
 textarea {
   border: none;
   width: 100%;
-  height: 5em;
-  font-size: 2.2em;
+  height: 7em;
+  font-size: 3.2em;
   outline: none;
-  font-family: 'Roboto-Light';
-  font-weight: 300;
+  font-family: 'Acumin-Light';
+  font-weight: 100;
   color: rgb(193, 70, 193);
   resize: none;
 }
@@ -48,7 +65,7 @@ textarea {
   flex-direction: row;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
   textarea {
     height: 6em;
     width: 100%;
@@ -62,6 +79,11 @@ textarea {
   .bottom-form .form-group {
     margin-top: 1.6em;
   }
+
+  .form-categories {
+    padding-top: 0.5em;
+    padding-bottom: 2em;
+  }
 }
 
 /* Radio Button */
@@ -71,23 +93,22 @@ input[type="radio"] {
 }
 
 input[type="radio"] + label {
-  width: 45px;
-  height: 45px;
   margin: 5px;
-  padding: 10px 13px;
+  padding: 10px 16px;
   border-radius: 40px;
   border: 2px solid #333;
   color: #333;
   position: relative;
   font-size: 1.2em;
+  font-family: 'Acumin-Light';
 }
 
 input[type="radio"]#radio-f + label {
-  padding: 10px 16px;
+  padding: 10px 19px;
 }
 
 input[type="radio"]#radio-d + label {
-  padding: 10px 15px;
+  padding: 10px 18px;
 }
 
 /*hover, checked, focus*/
@@ -117,8 +138,9 @@ input[type="radio"]:focus + label{
   border: none;
   width: 2em;
   border-radius: 22em;
-  padding: 0.5em;
+  padding: 0.4em;
   color: rgb(193, 70, 193);
+  font-family: 'Acumin-Light';
   font-size: 1.2em;
   outline: none;
 }
@@ -134,6 +156,7 @@ input[type="radio"]:focus + label{
   display: flex;
   align-items: center;
   justify-content: center;
+  font-weight: bold;
   height: 43px;
   outline: none;
   cursor: pointer;
@@ -143,3 +166,7 @@ input[type="radio"]:focus + label{
   background-color: rgb(193, 70, 193);
   color: white;
 }
+
+/* .card-body { */
+  /* display: flex;
+} */

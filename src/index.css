@@ -20,9 +20,12 @@ body {
 }
 
 @font-face {
-  font-family: 'Roboto-Light';
-  src: local('Roboto-Light'), url(./fonts/Roboto-Light.ttf) format('truetype');
+  font-family: 'Acumin-Light';
+  src: local('Acumin-Light'), url(./fonts/Acumin-Light.ttf) format('truetype');
 }
 
-
+@font-face {
+  font-family: 'Acumin';
+  src: local('Acumin'), url(./fonts/Acumin.ttf) format('truetype');
+}
 
