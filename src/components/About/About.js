@@ -17,7 +17,13 @@ class About extends React.Component {
               &#8594; tisch deine Meinung auf!
             </p>
           </Link>
-          <p id='form-title'>aufgetischt:</p>  
+          <div className='about-content'>
+            <p id='about-title'>aufgetischt:</p>
+            <p id='about-description'>
+              Aufgetischt ist eine Kampagne für mehr Diskurs und Meinungsvielfalt.
+              Wir tischen verschiedene Meinungen auf ....
+            </p>
+          </div>
         </div>
       </React.Fragment>
     );

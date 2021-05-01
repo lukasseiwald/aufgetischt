@@ -4,17 +4,20 @@
   max-width: 70em;
 }
 
-#form-title {
-  font-weight: 600;
-  font-size: 3em;
-  margin: 0;
-  padding-bottom: 5px;
-  padding-left: 0.1em;
+.about-content {
+  position: absolute;
+  top: 6em;
+  left: 2em;
 }
 
-.form-header {
-  display: flex;
-  padding-top: 1em;
+#about-title {
+  font-weight: 600;
+  font-size: 3em;
+  margin-top: 0;
+}
+
+#about-description {
+  font-size: 3em;
 }
 
 .openFormButton {
