@@ -97,6 +97,10 @@ class Form extends React.Component {
     this.refs.category.value = event.target.value
   }
 
+  openAbout = () => {
+    console.log("open About")
+  }
+
   render() {
     const { opinions } = this.state;
     return (
@@ -105,8 +109,8 @@ class Form extends React.Component {
           <div className='row'>
             <div className='col-xl-12'>
               <form onSubmit={this.handleSubmit}>
-                <div className='form-row'>
-                  <p className='title-category'>Wähle dein Thema:</p>
+                <p className='title-category'>Wähle dein Thema:</p>
+                <div className='form-row form-header'>
                   <div className='col-md-6 form-categories' ref='category' onChange={this.onChangeCategory}>
                     <input
                       type='radio'
@@ -141,6 +145,13 @@ class Form extends React.Component {
                     />
                     <label for='radio-category-4'>MENTALE GESUNDHEIT</label>
                   </div>
+                  <button
+                    className='openAboutButton'
+                    onClick={this.openAbout}>
+                    <p>
+                      &#8594; was ist aufgetischt?
+                    </p>
+                  </button>
                 </div>
                 <p id='form-title'>aufgetischt:</p>
                 <div className='form-row'>

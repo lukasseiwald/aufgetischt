@@ -28,6 +28,25 @@ form {
   padding-left: 0.1em;
 }
 
+.form-header {
+  display: flex;
+  padding-top: 1em;
+}
+
+.openAboutButton {
+  border: none;
+  background: none;
+  height: 5em;
+  outline: none;
+  cursor: pointer;
+}
+
+.openAboutButton p {
+  width: max-content;
+  color:rgb(193, 70, 193);
+  font-size: 1.5em;
+}
+
 .bottom-form {
   display: flex;
   width: 100%;
@@ -40,8 +59,7 @@ form {
 }
 
 .form-categories {
-  padding-top: 1em;
-  padding-bottom: 4em;
+  margin-bottom: 4em;
   display: flex;
   width: 100%;
   justify-content: flex-start;
