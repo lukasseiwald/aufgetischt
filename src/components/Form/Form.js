@@ -109,7 +109,7 @@ class Form extends React.Component {
           <div className='row'>
             <div className='col-xl-12'>
               <form onSubmit={this.handleSubmit}>
-                <p className='title-category'>Wähle dein Thema:</p>
+                {/* <p className='title-category'>Wähle dein Thema:</p> */}
                 <div className='form-row form-header'>
                   <div className='col-md-6 form-categories' ref='category' onChange={this.onChangeCategory}>
                     <input
