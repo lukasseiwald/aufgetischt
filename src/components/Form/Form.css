@@ -36,15 +36,17 @@ form {
 .openAboutButton {
   border: none;
   background: none;
-  height: 5em;
+  height: 3em;
   outline: none;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .openAboutButton p {
   width: max-content;
   color:#FF10F0;
   font-size: 1.5em;
+  margin-top: 0.5em;
 }
 
 .bottom-form {

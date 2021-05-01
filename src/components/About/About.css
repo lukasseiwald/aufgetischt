@@ -1,0 +1,45 @@
+.container {
+  font-family: 'Acumin-Light';
+  width: 80%;
+  max-width: 70em;
+}
+
+#form-title {
+  font-weight: 600;
+  font-size: 3em;
+  margin: 0;
+  padding-bottom: 5px;
+  padding-left: 0.1em;
+}
+
+.form-header {
+  display: flex;
+  padding-top: 1em;
+}
+
+.openFormButton {
+  border: none;
+  background: none;
+  height: 3em;
+  outline: none;
+  cursor: pointer;
+  text-decoration: none;
+  position: absolute;
+  top: 2em;
+  right: 3em;
+}
+
+.openFormButton p {
+  width: max-content;
+  color:#FF10F0;
+  font-size: 1.5em;
+  margin-top: 0.5em;
+}
+
+
+@media only screen and (max-width: 700px) {
+  
+}
+
+
+

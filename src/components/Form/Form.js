@@ -2,6 +2,9 @@ import React from 'react';
 import Firebase from 'firebase';
 import './Form.css';
 import Plate from '../Plate/Plate'
+import {
+  Link,
+} from 'react-router-dom';
 
 class Form extends React.Component {
   constructor(props) {
@@ -145,13 +148,13 @@ class Form extends React.Component {
                     />
                     <label for='radio-category-4'>MENTALE GESUNDHEIT</label>
                   </div>
-                  <button
+                  <Link
                     className='openAboutButton'
-                    onClick={this.openAbout}>
+                    to={{pathname: '/about'}}>
                     <p>
                       &#8594; was ist aufgetischt?
                     </p>
-                  </button>
+                  </Link>
                 </div>
                 <p id='form-title'>aufgetischt:</p>
                 <div className='form-row'>
