@@ -111,27 +111,35 @@ class Form extends React.Component {
                     <input
                       type='radio'
                       name='category'
-                      value='covid'
-                      id='radio-covid'
+                      value='rassismus'
+                      id='radio-category-1'
                       className='radioButton'
                     />
-                    <label for='radio-covid'>COVID-19</label>
+                    <label for='radio-category-1'>RASSISMUS</label>
                     <input
                       type='radio'
                       name='category'
-                      value='equality'
-                      id='radio-equality'
+                      value='umwelt'
+                      id='radio-category-2'
                       className='radioButton'
                     />
-                    <label for='radio-equality'>GLEICHBERECHTIGUNG</label>
+                    <label for='radio-category-2'>UMWELTSCHUTZ</label>
                     <input
                       type='radio'
                       name='category'
-                      value='other'
-                      id='radio-other'
+                      value='feminismus'
+                      id='radio-category-3'
                       className='radioButton'
                     />
-                    <label for='radio-other'>ANDERES</label>
+                    <label for='radio-category-3'>FEMINISMUS</label>
+                    <input
+                      type='radio'
+                      name='category'
+                      value='mental-health'
+                      id='radio-category-4'
+                      className='radioButton'
+                    />
+                    <label for='radio-category-4'>MENTALE GESUNDHEIT</label>
                   </div>
                 </div>
                 <p id='form-title'>aufgetischt:</p>
@@ -190,7 +198,7 @@ class Form extends React.Component {
                     </div>
                   </div>
                   <button type='submit' className='btn btn-primary button-submit form-group'>
-                    SUBMIT
+                    AUFTISCHEN
                   </button>
                 </div>
               </form>
