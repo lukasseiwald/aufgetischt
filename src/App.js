@@ -9,7 +9,7 @@ import {
 
 import Form from './components/Form/Form';
 import About from './components/About/About';
-
+import Footer from './components/Footer/Footer';
 
 function App() {
   const firebaseApp = firebase.apps[0];
@@ -21,6 +21,7 @@ function App() {
           <Route exact path='/'>
             <div className='section-hero'>
               <Form />
+              <Footer />
             </div>
           </Route>
           <Route path='/about'>
