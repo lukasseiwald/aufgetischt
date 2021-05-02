@@ -9,6 +9,8 @@ import {
 
 import Form from './components/Form/Form';
 import About from './components/About/About';
+import Impressum from './components/Impressum/Impressum';
+import Data from './components/Data/Data';
 import Footer from './components/Footer/Footer';
 
 function App() {
@@ -26,6 +28,12 @@ function App() {
           </Route>
           <Route path='/about'>
             <About />
+          </Route>
+          <Route path='/impressum'>
+            <Impressum />
+          </Route>
+          <Route path='/data'>
+            <Data />
           </Route>
         </Switch>
       </BrowserRouter>
