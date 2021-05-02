@@ -7,6 +7,14 @@ import {
   Link,
 } from 'react-router-dom';
 
+const Mailto = ({ email, subject = '', body = '', children }) => {
+  let params = subject || body ? '?' : '';
+  if (subject) params += `subject=${encodeURIComponent(subject)}`;
+  if (body) params += `${subject ? '&' : ''}body=${encodeURIComponent(body)}`;
+
+  return <a href={`mailto:${email}${params}`}>{children}</a>;
+};
+
 class Footer extends React.Component {
   constructor(props) {
     super(props);
@@ -15,7 +23,7 @@ class Footer extends React.Component {
   render() {
     return (
       <div
-        className='container'
+        className='footer-container'
       > 
         <div
           className='footer'
@@ -28,14 +36,22 @@ class Footer extends React.Component {
             >
               aufgetischt: eine Intervention von studiostörung
             </p>
+            <a href='http://www.instagram.com' target='_blank'>
+              <div className='social'>
+                <FontAwesomeIcon
+                  className='social-icon'
+                  icon={faInstagram} />
+                <p>@aufgetischt</p>
+              </div>
+            </a>
+            <Mailto email='info@aufgetischt.link' subject='Aufgetischtes' body=''>
             <div className='social'>
-              <FontAwesomeIcon icon={faInstagram} />
-              <p>@aufgetischt</p>
-            </div>
-            <div className='social'>
-              <FontAwesomeIcon icon={faEnvelope} />
+              <FontAwesomeIcon
+                className='social-icon' 
+                icon={faEnvelope} />
               <p>info@aufgetischt.link</p>
             </div>
+            </Mailto>,
           </div>
           <div
             className='footer-right'
