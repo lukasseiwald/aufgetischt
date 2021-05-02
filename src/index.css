@@ -29,3 +29,7 @@ body {
   src: local('Acumin'), url(./fonts/Acumin.ttf) format('truetype');
 }
 
+@font-face {
+  font-family: 'Acumin-Extra-Light';
+  src: local('Acumin-Extra-Light'), url(./fonts/Acumin-Extra-Light.ttf) format('truetype');
+}

@@ -51,7 +51,7 @@ class Footer extends React.Component {
                 icon={faEnvelope} />
               <p>info@aufgetischt.link</p>
             </div>
-            </Mailto>,
+            </Mailto>
           </div>
           <div
             className='footer-right'
