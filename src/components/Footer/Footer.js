@@ -36,12 +36,12 @@ class Footer extends React.Component {
             >
               aufgetischt: eine Intervention von studiostörung
             </p>
-            <a href='http://www.instagram.com' target='_blank'>
+            <a href='https://www.instagram.com/aufgetischt.link/' target='_blank'>
               <div className='social'>
                 <FontAwesomeIcon
                   className='social-icon'
                   icon={faInstagram} />
-                <p>@aufgetischt</p>
+                <p>@aufgetischt.link</p>
               </div>
             </a>
             <Mailto email='info@aufgetischt.link' subject='Aufgetischtes' body=''>

@@ -21,8 +21,10 @@ function App() {
       <BrowserRouter>
         <Switch>
           <Route exact path='/'>
-            <div className='section-hero'>
-              <Form />
+            <div className='app-container'>
+              <div className='section-hero'>
+                <Form />
+              </div>
               <Footer />
             </div>
           </Route>

@@ -173,7 +173,7 @@ class Form extends React.Component {
                 </div>
                 <div className='bottom-form'>
                   <div className='form-group bottom-form-row-1'>
-                    <div className='col-md-6' ref='gender' onChange={this.onChangeGender}>
+                    <div className='col-md-6 gender-buttons' ref='gender' onChange={this.onChangeGender}>
                       <input
                         type='radio'
                         name='gender'
