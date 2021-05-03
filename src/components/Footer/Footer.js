@@ -1,7 +1,7 @@
 import React from 'react';
 import './Footer.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {  faInstagram, faEnve } from '@fortawesome/free-brands-svg-icons';
+import {  faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope  } from '@fortawesome/free-solid-svg-icons';
 import {
   Link,
@@ -16,10 +16,6 @@ const Mailto = ({ email, subject = '', body = '', children }) => {
 };
 
 class Footer extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <div
@@ -36,7 +32,7 @@ class Footer extends React.Component {
             >
               aufgetischt: eine Intervention von studiostörung
             </p>
-            <a href='https://www.instagram.com/aufgetischt.link/' target='_blank'>
+            <a href='https://www.instagram.com/aufgetischt.link/' target='_blank' rel="noreferrer">
               <div className='social'>
                 <FontAwesomeIcon
                   className='social-icon'

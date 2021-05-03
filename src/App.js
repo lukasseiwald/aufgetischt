@@ -1,6 +1,6 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
-import firebase from 'firebase';
+// import firebase from 'firebase';
 import {
   BrowserRouter,
   Switch,
@@ -8,13 +8,14 @@ import {
 } from 'react-router-dom';
 
 import Form from './components/Form/Form';
+import Gallery from './components/Gallery/Gallery'
 import About from './components/About/About';
 import Impressum from './components/Impressum/Impressum';
 import Data from './components/Data/Data';
 import Footer from './components/Footer/Footer';
 
 function App() {
-  const firebaseApp = firebase.apps[0];
+  // const firebaseApp = firebase.apps[0];
 
   return (
     <div className='App'>
@@ -22,8 +23,11 @@ function App() {
         <Switch>
           <Route exact path='/'>
             <div className='app-container'>
-              <div className='section-hero'>
+              <div className='section-form'>
                 <Form />
+              </div>
+              <div className='section-gallery'>
+                <Gallery />
               </div>
               <Footer />
             </div>

@@ -11,14 +11,10 @@ class Form extends React.Component {
     super(props);
 
     this.state = {
-      opinions: []
+      // opinions: []
     };
     this.onChangeGender = this.onChangeGender.bind(this);
     this.onChangeCategory = this.onChangeCategory.bind(this);
-  }
-
-  componentDidMount() {
-    this.getUserData();
   }
 
   componentDidUpdate(prevProps, prevState) {
@@ -34,14 +30,6 @@ class Form extends React.Component {
     console.log('DATA SAVED');
   };
 
-  getUserData = () => {
-    let ref = Firebase.database().ref('/');
-    ref.on('value', snapshot => {
-      const state = snapshot.val();
-      this.setState(state);
-    });
-  };
-
   handleSubmit = event => {
     event.preventDefault();
     let text = this.refs.text.value;
@@ -50,23 +38,19 @@ class Form extends React.Component {
     let age = this.refs.age.value || '-' ;
     let uid = this.refs.uid.value;
 
-    if (uid && text && age && gender && category) {
-      console.log('zyessss')
-
-      const { opinions } = this.state;
-      const index = opinions.findIndex(data => {
-        return data.uid === uid;
-      });
-      opinions[index].text = text;
-      opinions[index].category = category;
-      opinions[index].gender = gender;
-      opinions[index].age = age;
-      this.setState({ opinions });
-    } else if (text && age && gender && category) {
-      const uid = new Date().getTime().toString();
-      const { opinions } = this.state;
-      opinions.push({ uid, text, category, gender, age });
-      this.setState({ opinions });
+    if (text && age && gender && category) {
+      // const uid = new Date().getTime().toString();
+      // const { opinions } = this.state;
+      // opinions.push({ uid, text, category, gender, age });
+      // this.setState({ opinions });
+      
+      Firebase.database()
+        .ref('/opinions').push({
+          age: age,
+          category: category,
+          gender: gender,
+          text: text,
+        })
     }
 
     this.refs.text.value = '';
@@ -74,22 +58,6 @@ class Form extends React.Component {
     this.refs.gender.value = '';
     this.refs.age.value = '';
     this.refs.uid.value = '';
-  };
-
-  removeData = opinion => {
-    const { opinions } = this.state;
-    const newState = opinions.filter(data => {
-      return data.uid !== opinion.uid;
-    });
-    this.setState({ opinions: newState });
-  };
-
-  updateData = opinion => {
-    this.refs.uid.value = opinion.uid;
-    this.refs.text.value = opinion.text;
-    this.refs.category.value = opinion.category;
-    this.refs.gender.value = opinion.gender;
-    this.refs.age.value = opinion.age;
   };
 
   onChangeGender(event) {
@@ -100,12 +68,7 @@ class Form extends React.Component {
     this.refs.category.value = event.target.value
   }
 
-  openAbout = () => {
-    console.log("open About")
-  }
-
   render() {
-    const { opinions } = this.state;
     return (
       <React.Fragment>
         <div className='container'>
@@ -216,40 +179,6 @@ class Form extends React.Component {
                   </button>
                 </div>
               </form>
-            </div>
-          </div>
-          <div className='row'>
-            <div className='col-xl-12'>
-              <h1>
-                Teller:
-              </h1>
-            </div>
-          </div>
-          <div className='row'>
-            <div className='col-xl-12'>
-              {opinions.map(opinion => (
-                <div
-                  key={opinion.uid}
-                  className='card float-left'
-                  style={{ width: '18rem', marginRight: '1rem' }}
-                >
-                  <div className='card-body'>
-                    <Plate text={opinion.text} />
-                    <div className='detail'>
-                      <h5 className='card-title'>{opinion.text}</h5>
-                      <p className='card-text'>Thema: {opinion.category}</p>
-                      <p className='card-text'>Gender: {opinion.gender}</p>
-                      <p className='card-text'>Alter: {opinion.age}</p>
-                      <button
-                        onClick={() => this.removeData(opinion)}
-                        className='btn btn-link'
-                      >
-                        Delete
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              ))}
             </div>
           </div>
         </div>
