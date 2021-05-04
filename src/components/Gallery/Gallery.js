@@ -47,6 +47,14 @@ class Gallery extends React.Component {
       <div className='container'>
         <div className='gallery'>
           <div className='col-md-6 form-categories' ref='category-gallery' onChange={this.onChangeCategoryGallery}>
+          <input
+              type='radio'
+              name='category-gallery'
+              value='all'
+              id='radio-category-gallery-0'
+              className='radioButton'
+            />
+            <label htmlFor='radio-category-gallery-0'>ALL</label>
             <input
               type='radio'
               name='category-gallery'
@@ -85,7 +93,8 @@ class Gallery extends React.Component {
               <h1>loading...</h1>
             </div>
           }
-          {Object.keys(opinions).map((key, id) => 
+          {/*  .filter(opinions[key].category.includes(category)) */}
+          {Object.keys(opinions).filter(opinion => (category !== 'all') ? (opinions[opinion].category === category) : (opinions !== null)).map((key, id) => 
             <div
               key={key}
               className='card float-left'
