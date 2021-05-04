@@ -54,7 +54,7 @@ class Gallery extends React.Component {
               id='radio-category-gallery-0'
               className='radioButton'
             />
-            <label htmlFor='radio-category-gallery-0'>ALL</label>
+            <label htmlFor='radio-category-gallery-0'>ALLES</label>
             <input
               type='radio'
               name='category-gallery'
@@ -90,7 +90,7 @@ class Gallery extends React.Component {
           </div>
           {loading  &&
             <div>
-              <h1>loading...</h1>
+              <h1>lädt ...</h1>
             </div>
           }
           {/*  .filter(opinions[key].category.includes(category)) */}
@@ -101,13 +101,7 @@ class Gallery extends React.Component {
               style={{ width: '18rem', marginRight: '1rem' }}
             >
               <div className='card-body'>
-                <Plate text={opinions[key].text} />
-                <div className='detail'>
-                  <h5 className='card-title'>{opinions[key].text}</h5>
-                  <p className='card-text'>Thema: {opinions[key].category}</p>
-                  <p className='card-text'>Gender: {opinions[key].gender}</p>
-                  <p className='card-text'>Alter: {opinions[key].age}</p>
-                </div>
+                <Plate opinion={opinions[key]} />
               </div>
             </div>
           )}

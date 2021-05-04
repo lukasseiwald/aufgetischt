@@ -1,3 +1,107 @@
 .plate {
   transform: scale(0.7) translate(-18em, 0);
 }
+
+/* .modal-plate {
+  width: 70%;
+} */
+.plate-clickable {
+  border: none;
+  background: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.plate-detail {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 100%;
+}
+
+.ReactModal__Content {
+  padding: 0;
+}
+
+.plate-detail-1 {
+  position: relative;
+  width: 50%;
+  border-right: 1px solid black;
+  padding-right: 20px;
+}
+
+.plate-detail-1-body {
+  margin-top: 3em;
+}
+
+.plate-detail-1 h2 {
+  font-family: 'ACUMIN-EXTRA-LIGHT';
+  font-weight: 100;
+  text-align: center;
+  width: 100%;
+  font-size: 8vw;
+  margin: 0;
+}
+
+.plate-detail-1 p {
+  font-family: 'ACUMIN-EXTRA-LIGHT';
+  font-weight: 100;
+  text-align: center;
+  width: 100%;
+  font-size: 2.2vw;
+  margin: 0;
+}
+
+.nachschlag {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 0.6em 2em;
+  margin: 1em;
+  border: 1px solid black;
+  border-radius: 12em;
+  background: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.nachschlag:hover {
+  border-color: #FF10F0;
+  color: #FF10F0;
+}
+
+.plate-detail-2 {
+  width: 50%;
+  align-self: center;
+}
+
+.closeModalButton {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  border: none;
+  background: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.closeIcon {
+  font-size: 3em;
+}
+
+@media only screen and (max-width: 700px) {
+  .plate-detail {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+  }
+
+  .plate-detail-1 {
+    width: 100%;
+    border-top: 1px solid black;
+    border-right: none;
+    padding: 0;
+  }
+}
