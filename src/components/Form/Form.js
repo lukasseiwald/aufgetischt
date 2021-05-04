@@ -1,7 +1,6 @@
 import React from 'react';
 import Firebase from 'firebase';
 import './Form.css';
-import Plate from '../Plate/Plate'
 import {
   Link,
 } from 'react-router-dom';
@@ -27,7 +26,6 @@ class Form extends React.Component {
     Firebase.database()
       .ref('/')
       .set(this.state);
-    console.log('DATA SAVED');
   };
 
   handleSubmit = event => {
@@ -36,14 +34,8 @@ class Form extends React.Component {
     let category = this.refs.category.value || '-' ;
     let gender = this.refs.gender.value || '-' ;
     let age = this.refs.age.value || '-' ;
-    let uid = this.refs.uid.value;
 
     if (text && age && gender && category) {
-      // const uid = new Date().getTime().toString();
-      // const { opinions } = this.state;
-      // opinions.push({ uid, text, category, gender, age });
-      // this.setState({ opinions });
-      
       Firebase.database()
         .ref('/opinions').push({
           age: age,
@@ -85,7 +77,7 @@ class Form extends React.Component {
                       id='radio-category-1'
                       className='radioButton'
                     />
-                    <label for='radio-category-1'>RASSISMUS</label>
+                    <label htmlFor='radio-category-1'>RASSISMUS</label>
                     <input
                       type='radio'
                       name='category'
@@ -93,7 +85,7 @@ class Form extends React.Component {
                       id='radio-category-2'
                       className='radioButton'
                     />
-                    <label for='radio-category-2'>UMWELTSCHUTZ</label>
+                    <label htmlFor='radio-category-2'>UMWELTSCHUTZ</label>
                     <input
                       type='radio'
                       name='category'
@@ -101,7 +93,7 @@ class Form extends React.Component {
                       id='radio-category-3'
                       className='radioButton'
                     />
-                    <label for='radio-category-3'>FEMINISMUS</label>
+                    <label htmlFor='radio-category-3'>FEMINISMUS</label>
                     <input
                       type='radio'
                       name='category'
@@ -109,7 +101,7 @@ class Form extends React.Component {
                       id='radio-category-4'
                       className='radioButton'
                     />
-                    <label for='radio-category-4'>MENTALE GESUNDHEIT</label>
+                    <label htmlFor='radio-category-4'>MENTALE GESUNDHEIT</label>
                   </div>
                   <Link
                     className='openAboutButton'
@@ -144,7 +136,7 @@ class Form extends React.Component {
                         id='radio-m'
                         className='radioButton'
                       />
-                      <label for='radio-m'>M</label>
+                      <label htmlFor='radio-m'>M</label>
                       <input
                         type='radio'
                         name='gender'
@@ -152,7 +144,7 @@ class Form extends React.Component {
                         id='radio-f'
                         className='radioButton'
                       />
-                      <label for='radio-f'>F</label>
+                      <label htmlFor='radio-f'>F</label>
                       <input
                         type='radio'
                         name='gender'
@@ -160,7 +152,7 @@ class Form extends React.Component {
                         id='radio-d'
                         className='radioButton'
                       />
-                      <label for='radio-d'>D</label>
+                      <label htmlFor='radio-d'>D</label>
                     </div>
                     <div className='col-md-6 input-age'>
                       <label>AGE:</label>

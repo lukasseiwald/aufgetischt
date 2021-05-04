@@ -1,0 +1,33 @@
+.gallery {
+  padding: 1em;
+}
+
+.form-categories {
+  margin-bottom: 1em;
+  margin-right: 1em;
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  font-size: 0.8em;
+}
+
+input[type="radio"] + label {
+  margin: 5px;
+  padding: 10px 16px;
+  border-radius: 40px;
+  border: 2px solid #333;
+  color: #333;
+  position: relative;
+  font-size: 1.2em;
+  font-family: 'Acumin-Light';
+}
+
+input[type="radio"]:hover + label,
+input[type="radio"]:checked + label,
+input[type="radio"]:focus + label{
+  cursor: pointer;
+  border-color: #FF10F0;
+  color: #FF10F0;
+}
+
