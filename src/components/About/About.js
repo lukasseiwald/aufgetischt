@@ -20,8 +20,13 @@ class About extends React.Component {
           <div className='about-content'>
             <p id='about-title'>aufgetischt:</p>
             <p id='about-description'>
-              Aufgetischt ist eine Kampagne für mehr Diskurs und Meinungsvielfalt.
-              Wir tischen verschiedene Meinungen auf ....
+              aufgetischt ist eine Kampagne für mehr Diskurs und Meinungsvielfalt.
+            </p>
+            <p id='about-description'>
+              Wir tischen verschiedene Meinungen auf und servieren damit Vielfalt. Denn diese wird durch den fehlenden Austausch beschnitten. Wir wirken der Gruppenpolarisation, Blasenbildung und den Echokammern entgegen um mehr Grauzonen zu schaffen.
+            </p>
+            <p id='about-description'>
+              Dein Tellerrand ist nicht das Ende, es gibt den ganzen Tisch!
             </p>
           </div>
         </div>

@@ -8,7 +8,8 @@ import {
 } from 'react-router-dom';
 
 import Form from './components/Form/Form';
-import Gallery from './components/Gallery/Gallery'
+import Gallery from './components/Gallery/Gallery';
+import OpenAboutButton from './components/OpenAboutButton/OpenAboutButton';
 import About from './components/About/About';
 import Impressum from './components/Impressum/Impressum';
 import Data from './components/Data/Data';
@@ -25,6 +26,7 @@ function App() {
         <Switch>
           <Route exact path='/'>
             <div className='app-container'>
+              <OpenAboutButton />
               <div className='section-form' id='form'>
                 <Form />
               </div>

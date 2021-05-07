@@ -103,13 +103,6 @@ class Form extends React.Component {
                     />
                     <label htmlFor='radio-category-4'>MENTALE GESUNDHEIT</label>
                   </div>
-                  <Link
-                    className='openAboutButton'
-                    to={{pathname: '/about'}}>
-                    <p>
-                      &#8594; was ist aufgetischt?
-                    </p>
-                  </Link>
                 </div>
                 <p id='form-title'>aufgetischt:</p>
                 <div className='form-row'>
