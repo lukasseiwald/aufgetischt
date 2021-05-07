@@ -10,7 +10,8 @@ class Gallery extends React.Component {
     this.state = {
       loading: false,
       opinions: [],
-      category: 'all'
+      category: 'all',
+      showAll: true,
     };
 
     this.onChangeCategoryGallery = this.onChangeCategoryGallery.bind(this);
@@ -37,11 +38,12 @@ class Gallery extends React.Component {
     const { category } = this.state;
     this.setState({
       category: event.target.value,
+      showAll: event.target.value === 'all' ? true : false,
     })
   }
 
   render() {
-    const { loading, opinions, category } = this.state;
+    const { loading, opinions, category, showAll } = this.state;
 
     return (
       <div className='container'>
@@ -53,6 +55,7 @@ class Gallery extends React.Component {
               value='all'
               id='radio-category-gallery-0'
               className='radioButton'
+              checked={showAll}
             />
             <label htmlFor='radio-category-gallery-0'>ALLES</label>
             <input

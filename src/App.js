@@ -23,7 +23,7 @@ function App() {
         <Switch>
           <Route exact path='/'>
             <div className='app-container'>
-              <div className='section-form'>
+              <div className='section-form' id='form'>
                 <Form />
               </div>
               <div className='section-gallery'>

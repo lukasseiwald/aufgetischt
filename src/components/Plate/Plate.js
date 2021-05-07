@@ -12,6 +12,7 @@ class Plate extends React.Component {
     };
 
     this.showDetailToggle = this.showDetailToggle.bind(this);
+    this.nachschlag = this.nachschlag.bind(this);
   }
 
   showDetailToggle(event) {
@@ -20,6 +21,12 @@ class Plate extends React.Component {
     this.setState({
       showDetail: !showDetail,
     })
+  }
+
+  nachschlag(event) {
+    this.showDetailToggle();
+    // window.scrollTo(-10,0)
+    // console.log(window)
   }
 
   render() {
@@ -79,6 +86,7 @@ class Plate extends React.Component {
               </div>
               <button
                 className='nachschlag'
+                onClick={this.nachschlag}
               >
                 NACHSCHLAG
               </button>
