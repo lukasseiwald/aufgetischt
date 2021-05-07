@@ -13,6 +13,7 @@ import About from './components/About/About';
 import Impressum from './components/Impressum/Impressum';
 import Data from './components/Data/Data';
 import Footer from './components/Footer/Footer';
+import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 
 function App() {
   // const firebaseApp = firebase.apps[0];
@@ -20,6 +21,7 @@ function App() {
   return (
     <div className='App'>
       <BrowserRouter>
+        <ScrollToTop />
         <Switch>
           <Route exact path='/'>
             <div className='app-container'>
