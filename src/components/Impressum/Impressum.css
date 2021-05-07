@@ -4,10 +4,11 @@
   max-width: 70em;
 }
 
-.about-content {
+.impressum-content {
   position: absolute;
   top: 6em;
   left: 2em;
+  margin: 2em;
 }
 
 #about-title {
@@ -16,8 +17,9 @@
   margin-top: 0;
 }
 
-#about-description {
-  font-size: 3em;
+#impressum-title {
+  font-size: 2.5em;
+  font-weight: 800;
 }
 
 .openFormButton {
@@ -39,6 +41,20 @@
   margin-top: 0.5em;
 }
 
+.bold-text {
+  font-weight: bold;
+}
+
+.impressum-sub-title {
+  margin-top: 1.5em;
+  font-size: 1.5em;
+  font-weight: 800;
+}
+
+.impressum-sub-sub-title {
+  margin-top: 1em;
+  font-size: 1.2em;
+}
 
 @media only screen and (max-width: 700px) {
   
