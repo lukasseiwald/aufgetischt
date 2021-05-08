@@ -1,6 +1,5 @@
 // import logo from './logo.svg';
 import './App.css';
-// import firebase from 'firebase';
 import {
   BrowserRouter,
   Switch,
@@ -9,6 +8,7 @@ import {
 
 import Form from './components/Form/Form';
 import Gallery from './components/Gallery/Gallery';
+import TriggerWarning from './components/TriggerWarning/TriggerWarning';
 import OpenAboutButton from './components/OpenAboutButton/OpenAboutButton';
 import About from './components/About/About';
 import Impressum from './components/Impressum/Impressum';
@@ -34,6 +34,7 @@ function App() {
                 <Gallery />
               </div>
               <Footer />
+              <TriggerWarning />
             </div>
           </Route>
           <Route path='/about'>

@@ -1,0 +1,61 @@
+
+
+
+.triggerImage {
+  width: 18em;
+  height: 30%;
+  transform: rotateZ(10deg);
+}
+
+.triggerTextContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+} 
+
+.triggerText {
+  font-family: 'Acumin-Extra-Light';
+  font-size: 2em;
+  color: #666;
+  width: 70%;
+  max-width: 30em;
+  text-align: center;
+  align-self: center;
+  letter-spacing: -0.05em;
+}
+
+@media only screen and (max-width: 700px) {
+  .triggerImage {
+    width: 13em;
+    height: 30%;
+  }
+
+  .triggerText {
+    font-size: 1.5em;
+  }
+}
+
+
+@media only screen and (max-height: 970px) {
+  .triggerImage {
+    width: 10em;
+    height: 30%;
+  }
+
+  .triggerText {
+    font-size: 1.3em;
+  }
+}
+
+@media only screen and (max-width: 510px) {
+  .triggerImage {
+    width: 10em;
+    height: 30%;
+  }
+
+  .triggerText {
+    font-size: 1.2em;
+  }
+}
