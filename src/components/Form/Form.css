@@ -33,25 +33,6 @@ form {
   padding-top: 1em;
 }
 
-.openAboutButton {
-  border: none;
-  background: none;
-  height: 3em;
-  outline: none;
-  cursor: pointer;
-  text-decoration: none;
-  /* position: absolute;
-  top: 2em;
-  right: 2em; */
-}
-
-.openAboutButton p {
-  width: max-content;
-  color:#FF10F0;
-  font-size: 1.5em;
-  margin-top: 0.5em;
-}
-
 .bottom-form {
   display: flex;
   width: 100%;
@@ -189,12 +170,6 @@ input[type="radio"]:focus + label{
   .form-categories {
     padding-top: 0em;
     margin-top: 6em;
-  }
-
-  .openAboutButton {
-    position: absolute;
-    top: 2em;
-    right: 2em;
   }
 
   input[type="radio"] + label {
