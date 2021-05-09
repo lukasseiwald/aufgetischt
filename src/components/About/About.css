@@ -6,8 +6,9 @@
 
 .about-content {
   position: absolute;
-  top: 6em;
+  top: 7em;
   left: 2em;
+  padding-right: 2em;
 }
 
 #about-title {

@@ -1,32 +1,17 @@
 import React from 'react';
 import Firebase from 'firebase';
 import './Form.css';
-import {
-  Link,
-} from 'react-router-dom';
 
 class Form extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      // opinions: []
+      activeAgeInput: false,
     };
     this.onChangeGender = this.onChangeGender.bind(this);
     this.onChangeCategory = this.onChangeCategory.bind(this);
   }
-
-  componentDidUpdate(prevProps, prevState) {
-    if (prevState !== this.state) {
-      this.writeUserData();
-    }
-  }
-
-  writeUserData = () => {
-    Firebase.database()
-      .ref('/')
-      .set(this.state);
-  };
 
   handleSubmit = event => {
     event.preventDefault();
@@ -61,6 +46,8 @@ class Form extends React.Component {
   }
 
   render() {
+    const { activeAgeInput } = this.state;
+
     return (
       <React.Fragment>
         <div className='container'>
@@ -111,11 +98,11 @@ class Form extends React.Component {
                     <textarea
                       type='text'
                       ref='text'
-                      maxLength='35'
+                      maxLength='40'
                       className='form-control'
                       required
                       placeholder='Red nicht lange um den heißen Brei.                                                    
-                      Bring deine Meinung in 30 Zeichen auf den Punkt.'
+                      Bring deine Meinung in 40 Zeichen auf den Punkt.'
                     />
                   </div>
                 </div>
@@ -147,13 +134,31 @@ class Form extends React.Component {
                       />
                       <label htmlFor='radio-d'>D</label>
                     </div>
-                    <div className='col-md-6 input-age'>
+                    <div
+                      className='col-md-6 input-age active'
+                      style={{
+                        borderColor: activeAgeInput ? '#FF10F0' : '#000',
+                        color: activeAgeInput ? '#FF10F0' : '#000',
+                      }}
+                    >
                       <label>AGE:</label>
                       <input
                         type='number'
                         ref='age'
                         className='form-control'
                         placeholder='...'
+                        onChange={() => {
+                          if (this.refs.age.value !== '') {
+                            console.log(this.refs.age.value)
+                            this.setState({
+                              activeAgeInput: true
+                            })
+                          } else {
+                            this.setState({
+                              activeAgeInput: false
+                            })
+                          }
+                        }}
                         min='16'
                         max='99'
                       />

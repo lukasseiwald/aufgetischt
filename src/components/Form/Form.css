@@ -21,11 +21,12 @@ form {
 }
 
 #form-title {
-  font-weight: 600;
-  font-size: 3em;
+  font-weight: 300;
+  font-size: 4em;
   margin: 0;
   padding-bottom: 5px;
   padding-left: 0.1em;
+  letter-spacing: 0.03em;
 }
 
 .form-header {
@@ -52,6 +53,7 @@ form {
   justify-content: flex-start;
   flex-wrap: wrap;
   font-size: 0.8em;
+  font-weight: 800;
 }
 
 textarea {
@@ -85,6 +87,7 @@ input[type="radio"] + label {
   color: #333;
   position: relative;
   font-size: 1.2em;
+  font-weight: 800;
   font-family: 'Acumin-Light';
 }
 
@@ -117,24 +120,33 @@ input[type="radio"]:focus + label{
   align-items: center;
   justify-content: center;
   height: 43px;
+  font-weight: 800;
 }
 
 .input-age input {
   border: none;
   width: 2em;
   border-radius: 22em;
-  padding: 0.4em;
+  padding-right: 0.4em;
+  padding-left: 0.4em;
+  margin-bottom: 0.1em;
   color: #FF10F0;
   font-family: 'Acumin-Light';
   font-size: 1.2em;
   outline: none;
+  font-weight: 800;
+}
+
+input[type="number"]:placeholder-shown {
+  /* You need to add a placeholder to your fields. For example: <input "placeholder=" "/> */
+  border-color: green;
 }
 
 .button-submit {
   width: 100%;
   background-color: transparent;
-  border: 2px solid #FF10F0;
-  color: #FF10F0;
+  border: 2px solid #000;
+  color: #000;
   margin: -11px 0.5em;
   padding: 0px 13px;
   border-radius: 40px;
@@ -147,9 +159,9 @@ input[type="radio"]:focus + label{
   cursor: pointer;
 }
 
-.button-submit:focus {
-  background-color: #FF10F0;
-  color: white;
+.button-submit:hover {
+  color: #FF10F0;
+  border-color: #FF10F0;
 }
 
 @media only screen and (max-width: 700px) {
