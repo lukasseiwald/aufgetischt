@@ -63,6 +63,7 @@
   background: none;
   outline: none;
   cursor: pointer;
+  color: #000;
 }
 
 .nachschlag:hover {

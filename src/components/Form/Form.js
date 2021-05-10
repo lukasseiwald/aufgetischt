@@ -149,7 +149,6 @@ class Form extends React.Component {
                         placeholder='...'
                         onChange={() => {
                           if (this.refs.age.value !== '') {
-                            console.log(this.refs.age.value)
                             this.setState({
                               activeAgeInput: true
                             })

@@ -3,6 +3,10 @@ import React from 'react';
 import Modal from 'react-modal';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import './Plate.css';
+import {
+  Link,
+} from 'react-router-dom';
+
 class Plate extends React.Component {
   constructor(props) {
     super(props);
@@ -25,7 +29,7 @@ class Plate extends React.Component {
 
   nachschlag(event) {
     this.showDetailToggle();
-    // window.scrollTo(-10,0)
+    window.scrollTo(-10,0)
     // console.log(window)
   }
 
@@ -84,12 +88,13 @@ class Plate extends React.Component {
                 <p className='card-text'>Zum Thema "{opinion.category}"</p>
                 <p className='card-text'>von {opinion.gender}, {opinion.age} Jahre</p>
               </div>
-              <button
+              <Link
+                to='/'
                 className='nachschlag'
                 onClick={this.nachschlag}
               >
-                NACHSCHLAG
-              </button>
+                <p>NACHSCHLAG</p>
+              </Link>
             </div>
             <div className='plate-detail-2'>
               <svg width={800} height={600} xmlns="http://www.w3.org/2000/svg" className="plate">

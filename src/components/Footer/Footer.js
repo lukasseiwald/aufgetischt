@@ -1,11 +1,9 @@
 import React from 'react';
 import './Footer.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {  faInstagram } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope  } from '@fortawesome/free-solid-svg-icons';
 import {
   Link,
 } from 'react-router-dom';
+import fhSalzburgLogo from '../../assets/fh_salzburg.png'
 
 const Mailto = ({ email, subject = '', body = '', children }) => {
   let params = subject || body ? '?' : '';
@@ -21,37 +19,62 @@ class Footer extends React.Component {
       <div
         className='footer-container'
       > 
-        <div
-          className='footer'
-        > 
-          <div
-            className='footer-left'
-          > 
+        <div className='flex-row-container'>
+          <div className='flex-row-item big-row column-content'>
             <p
               className='footer-title'
             >
-              aufgetischt: eine Intervention von studiostörung
+              aufgetischt:
             </p>
-            <a href='https://www.instagram.com/aufgetischt.link/' target='_blank' rel="noreferrer">
-              <div className='social'>
-                <FontAwesomeIcon
-                  className='social-icon'
-                  icon={faInstagram} />
-                <p>@aufgetischt.link</p>
-              </div>
-            </a>
-            <Mailto email='info@aufgetischt.link' subject='Aufgetischtes' body=''>
-            <div className='social'>
-              <FontAwesomeIcon
-                className='social-icon' 
-                icon={faEnvelope} />
-              <p>info@aufgetischt.link</p>
-            </div>
-            </Mailto>
+            <p>
+              Der Tellerrand ist nicht das Ende,
+              es gibt den ganzen Tisch.
+            </p>
           </div>
-          <div
-            className='footer-right'
-          > 
+          <div className='flex-row-item big-row social-row'>
+            <div
+              className='social-icons'
+            >
+              <p>mail</p>
+              <p>ig</p>
+            </div>
+            <div
+              className='social-links'
+            >
+              <Mailto email='info@aufgetischt.link' subject='Aufgetischtes' body=''>
+                <div className='social'>
+                  <p>
+                      info@aufgetischt.link
+                  </p>
+                </div>
+              </Mailto>
+              <a href='https://www.instagram.com/aufgetischt.link/' target='_blank' rel='noreferrer'>
+                <div className='social'>
+                  <p>@aufgetischt.link</p>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div className='flex-row-item big-row column-content'>
+            <img
+              src={fhSalzburgLogo}
+              className='fhSalzburg'
+            />
+            <p>Ein Bachelorprojekt im Studiengang MultiMediaArt an der FH Salzburg</p>
+          </div>
+          <div className='flex-row-item'>
+            <p>Copyright © 2021 aufgetischt</p>
+            <p>Eine Intervention von studiostörung</p>
+          </div>
+          <div className='flex-row-item'>
+            <Link
+              to='/'
+              className='footer-link'
+            >
+              <p>wieder nach oben</p>
+            </Link>
+          </div>
+          <div className='flex-row-item'>
             <Link
               to='/impressum'
               className='footer-link'
