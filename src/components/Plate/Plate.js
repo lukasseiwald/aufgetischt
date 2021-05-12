@@ -1,7 +1,5 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import Modal from 'react-modal';
-import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import './Plate.css';
 import {
   Link,
@@ -133,9 +131,11 @@ class Plate extends React.Component {
               onClick={this.showDetailToggle}
               className='closeModalButton'
             >
-              <FontAwesomeIcon
+              <h3
                 className='closeIcon' 
-                icon={faTimes} />
+              >
+                X
+              </h3>
             </button>
           </div>
         </Modal>

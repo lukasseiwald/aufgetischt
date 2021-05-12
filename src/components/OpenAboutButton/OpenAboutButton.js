@@ -1,6 +1,5 @@
 import React from 'react';
 import './OpenAboutButton.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   Link,
 } from 'react-router-dom';

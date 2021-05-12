@@ -4,6 +4,9 @@ import {
   Link,
 } from 'react-router-dom';
 import fhSalzburgLogo from '../../assets/fh_salzburg.png'
+import arrowUp from '../../assets/aufgetischt_Pfeil.png'
+import StudioStoerungLogo from '../../assets/StudioStoerungLogo'
+
 
 const Mailto = ({ email, subject = '', body = '', children }) => {
   let params = subject || body ? '?' : '';
@@ -62,15 +65,25 @@ class Footer extends React.Component {
             />
             <p>Ein Bachelorprojekt im Studiengang MultiMediaArt an der FH Salzburg</p>
           </div>
-          <div className='flex-row-item'>
+          <div
+            className='flex-row-item column-flex'
+            id='copyright-section'
+          >
             <p>Copyright © 2021 aufgetischt</p>
-            <p>Eine Intervention von studiostörung</p>
+            <div className='row-flex'>
+              <p>Eine Intervention von </p>
+              <StudioStoerungLogo />
+            </div>
           </div>
           <div className='flex-row-item'>
             <Link
               to='/'
               className='footer-link'
-            >
+            > 
+              <img
+                className='arrowUp'
+                src={arrowUp}
+              />
               <p>wieder nach oben</p>
             </Link>
           </div>
@@ -79,7 +92,7 @@ class Footer extends React.Component {
               to='/impressum'
               className='footer-link'
             >
-              <p>Impressum</p>
+              <p id='impressum-link'>Impressum</p>
             </Link>
             <Link
               to='/data'
