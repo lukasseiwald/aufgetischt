@@ -10,6 +10,7 @@ class Gallery extends React.Component {
     this.state = {
       loading: false,
       opinions: [],
+      storedPlates: [],
       category: 'all',
       showAll: true,
     };
@@ -19,6 +20,7 @@ class Gallery extends React.Component {
 
   componentDidMount() {
     this.getUserData();
+    this.getStoredPlates();
   }
 
   getUserData = () => {
@@ -28,11 +30,46 @@ class Gallery extends React.Component {
     ref.on('value', snapshot => {
       const state = snapshot.val();
       this.setState({
-        loading: false,
         opinions: state,
       });
     });
   };
+
+  getStoredPlates() {
+    this.setState({ loading: true });
+
+    let storedPlates = [];
+    var storage = Firebase.storage();
+    var pathReference = storage.ref('plates/');
+
+    pathReference.listAll()
+    .then((res) => {
+      res.items.forEach((itemRef) => {
+        itemRef.getDownloadURL()
+        .then((url) => {
+          storedPlates.push(url);
+        })
+      });
+      this.setState({
+        loading: false,
+        storedPlates: storedPlates,
+      })
+    }).catch((error) => {
+      // Uh-oh, an error occurred!
+    });
+
+    console.log(this.state.storedPlates)
+
+    // console.log(Firebase.storage.ref('/'));
+    // ref.on('value', snapshot => {
+    //   const state = snapshot.val();
+    //   this.setState({
+    //     loading: false,
+    //     storedPlates: state,
+    //   });
+    // });
+    // console.log(this.state.storedPlates);
+  }
 
   onChangeCategoryGallery(event) {
     const { category } = this.state;
@@ -43,7 +80,7 @@ class Gallery extends React.Component {
   }
 
   render() {
-    const { loading, opinions, category, showAll } = this.state;
+    const { loading, opinions, storedPlates, category, showAll } = this.state;
 
     return (
       <div className='container'>
@@ -97,7 +134,6 @@ class Gallery extends React.Component {
               <h1>lädt ...</h1>
             </div>
           }
-          {/*  .filter(opinions[key].category.includes(category)) */}
           {Object.keys(opinions).filter(opinion => (category !== 'all') ? (opinions[opinion].category === category) : (opinions !== null)).map((key, id) => 
             <div
               key={key}
@@ -109,6 +145,10 @@ class Gallery extends React.Component {
               </div>
             </div>
           )}
+          {storedPlates.map(
+            function(plate){
+              return <img className='storedPlate' src={plate} />
+          })}
         </div>
       </div>
     )

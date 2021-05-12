@@ -32,3 +32,7 @@ input[type="radio"]:focus + label{
   color: #FF10F0;
 }
 
+.storedPlate {
+  width: 14em;
+}
+
