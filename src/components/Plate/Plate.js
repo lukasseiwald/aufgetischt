@@ -28,8 +28,10 @@ class Plate extends React.Component {
   nachschlag(e) {
     e.preventDefault();
     this.showDetailToggle();
-    window.scrollTo({top: 0, behavior: 'smooth'});
-    // console.log(window)
+    setTimeout(function(){ 
+      window.scrollTo({top: 0, behavior: 'smooth'});
+    }, 100);
+
   }
 
   render() {
