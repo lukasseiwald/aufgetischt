@@ -19,8 +19,56 @@ class Gallery extends React.Component {
   }
 
   componentDidMount() {
-    this.getUserData();
     this.getStoredPlates();
+    this.getUserData();
+  }
+
+  getStoredPlates() {
+    this.setState({ loading: true });
+
+    let storedPlates = [];
+    var storage = Firebase.storage();
+    var pathReference = storage.ref('plates/');
+
+    pathReference.listAll()
+    .then((res) => {
+      res.items.forEach((itemRef) => {
+        itemRef.getDownloadURL()
+        .then((url) => {
+          let plateObj = {};
+          
+          if(url.includes('umwelt'))
+            plateObj = {
+              category: 'umwelt',
+              url: url,
+            }
+          else if(url.includes('rassismus'))
+          plateObj = {
+            category: 'rassismus',
+            url: url,
+          }
+          else if(url.includes('mental'))
+          plateObj = {
+            category: 'mental-health',
+            url: url,
+          }
+          else if(url.includes('feminism'))
+          plateObj = {
+            category: 'feminismus',
+            url: url,
+          }
+          console.log(plateObj);
+          storedPlates[url] = (plateObj);
+          // toString().contains('umwelt')
+        })
+      });
+      this.setState({
+        loading: false,
+        storedPlates: storedPlates,
+      })
+    }).catch((error) => {
+      // Uh-oh, an error occurred!
+    });
   }
 
   getUserData = () => {
@@ -35,41 +83,6 @@ class Gallery extends React.Component {
     });
   };
 
-  getStoredPlates() {
-    this.setState({ loading: true });
-
-    let storedPlates = [];
-    var storage = Firebase.storage();
-    var pathReference = storage.ref('plates/');
-
-    pathReference.listAll()
-    .then((res) => {
-      res.items.forEach((itemRef) => {
-        itemRef.getDownloadURL()
-        .then((url) => {
-          storedPlates.push(url);
-        })
-      });
-      this.setState({
-        loading: false,
-        storedPlates: storedPlates,
-      })
-    }).catch((error) => {
-      // Uh-oh, an error occurred!
-    });
-
-    console.log(this.state.storedPlates)
-
-    // console.log(Firebase.storage.ref('/'));
-    // ref.on('value', snapshot => {
-    //   const state = snapshot.val();
-    //   this.setState({
-    //     loading: false,
-    //     storedPlates: state,
-    //   });
-    // });
-    // console.log(this.state.storedPlates);
-  }
 
   onChangeCategoryGallery(event) {
     const { category } = this.state;
@@ -134,6 +147,17 @@ class Gallery extends React.Component {
               <h1>lädt ...</h1>
             </div>
           }
+          {Object.keys(storedPlates).filter(plate => (category !== 'all') ? (storedPlates[plate].category === category) : (storedPlates !== null)).map((key, id) => 
+            <div
+              key={key}
+              className='card float-left'
+              style={{ width: '18rem', marginRight: '1rem' }}
+            >
+              <div className='card-body'>
+                <img className='storedPlate' src={storedPlates[key].url} />
+              </div>
+            </div>
+          )}
           {Object.keys(opinions).filter(opinion => (category !== 'all') ? (opinions[opinion].category === category) : (opinions !== null)).map((key, id) => 
             <div
               key={key}
@@ -145,10 +169,10 @@ class Gallery extends React.Component {
               </div>
             </div>
           )}
-          {storedPlates.map(
+          {/* {storedPlates.map(
             function(plate){
-              return <img className='storedPlate' src={plate} />
-          })}
+              return <img className='storedPlate' src={plate.url} />
+          })} */}
         </div>
       </div>
     )
