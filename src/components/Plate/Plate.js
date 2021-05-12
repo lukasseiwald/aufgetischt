@@ -25,9 +25,10 @@ class Plate extends React.Component {
     })
   }
 
-  nachschlag(event) {
+  nachschlag(e) {
+    e.preventDefault();
     this.showDetailToggle();
-    window.scrollTo(-10,0)
+    window.scrollTo({top: 0, behavior: 'smooth'});
     // console.log(window)
   }
 

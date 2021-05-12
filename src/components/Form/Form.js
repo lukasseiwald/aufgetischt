@@ -11,6 +11,7 @@ class Form extends React.Component {
     };
     this.onChangeGender = this.onChangeGender.bind(this);
     this.onChangeCategory = this.onChangeCategory.bind(this);
+    this.titleRef = React.createRef();
   }
 
   handleSubmit = event => {
@@ -50,7 +51,7 @@ class Form extends React.Component {
 
     return (
       <React.Fragment>
-        <div className='container'>
+        <div className='container' ref={this.titleRef}>
           <div className='row'>
             <div className='col-xl-12'>
               <form onSubmit={this.handleSubmit}>

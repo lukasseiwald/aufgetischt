@@ -17,6 +17,17 @@ const Mailto = ({ email, subject = '', body = '', children }) => {
 };
 
 class Footer extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.scrollToTop = this.scrollToTop.bind(this);
+  }
+
+  scrollToTop(e) {
+    e.preventDefault();
+    window.scrollTo({top: 0, behavior: 'smooth'});
+  }
+
   render() {
     return (
       <div
@@ -79,6 +90,7 @@ class Footer extends React.Component {
             <Link
               to='/'
               className='footer-link'
+              onClick={this.scrollToTop}
             > 
               <img
                 className='arrowUp'

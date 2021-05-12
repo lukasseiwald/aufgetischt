@@ -25,6 +25,8 @@ class TriggerWarning extends React.Component {
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
+          overflow: 'hidden',
+          overflowY: 'no-scroll',
         }}
         buttonStyle={{
           background: 'transparent',
