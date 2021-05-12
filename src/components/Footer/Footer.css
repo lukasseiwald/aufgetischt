@@ -2,8 +2,6 @@
   width: 100%;
   margin-top: 4em;
   display: flex;
-  justify-content: center;
-  align-items: center;
   color: #333;
   font-family: 'Acumin-Extra-Light';
 }
@@ -28,8 +26,6 @@
   /* border-top: 2px solid black; */
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
   padding: 2em 6em;
   text-decoration: none;
 }
@@ -43,8 +39,6 @@
 .social-row {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  align-items: center;
   padding: 0.3em 0;
   cursor: pointer;
   text-decoration: none;
@@ -77,11 +71,10 @@ a {
 }
 
 .footer-link {
-  padding-right: 2em;
-  padding-left: 0;
+  padding: 0 2em;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   text-decoration: none;
   cursor: pointer;
 }
@@ -99,6 +92,10 @@ a {
   padding: 0;
 }
 
+#data-link p {
+  padding: 0 !important;
+}
+
 #impressum-link {
   padding-left: 0em;
 }
@@ -112,15 +109,20 @@ a {
 
 .big-row {
   height: 200px !important;
+  align-items: center;
+  justify-content: flex-start;
 }
+
+.small-row {
+  justify-content: center;
+  align-items: flex-start;
+} 
 
 .flex-row-container > .flex-row-item {
   flex: 1 1 30%; /*grow | shrink | basis */
   height: 80px;
   padding: 1em;
   display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .flex-row-container > .flex-row-item p {
@@ -167,7 +169,7 @@ a {
 
 .arrowUp {
   width: 3em;
-  transform: translate(15px, -30px);
+  transform: translate(0em, -30px);
 }
 
 @media only screen and (max-width: 1019px) {
@@ -190,9 +192,6 @@ a {
   }
   #data-link {
     border-left: none;
-  }
-  .flex-row-container > .flex-row-item { 
-    
   }
   .big-row {
     height: 170px !important;

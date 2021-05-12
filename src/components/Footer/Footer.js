@@ -66,7 +66,7 @@ class Footer extends React.Component {
             <p>Ein Bachelorprojekt im Studiengang MultiMediaArt an der FH Salzburg</p>
           </div>
           <div
-            className='flex-row-item column-flex'
+            className='flex-row-item small-row column-flex'
             id='copyright-section'
           >
             <p>Copyright © 2021 aufgetischt</p>
