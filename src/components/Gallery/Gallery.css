@@ -36,3 +36,10 @@ input[type="radio"]:focus + label{
   width: 14em;
 }
 
+.gallery-wall {
+  display: grid;
+  grid-template-columns: 30% 30%;
+  grid-gap: 1em 1em;
+  grid-auto-flow: row dense;
+  width: 100%;
+}

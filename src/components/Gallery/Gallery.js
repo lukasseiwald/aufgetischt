@@ -20,65 +20,73 @@ class Gallery extends React.Component {
 
   componentDidMount() {
     this.getStoredPlates();
-    this.getUserData();
   }
 
-  getStoredPlates() {
+  async getStoredPlates() {
     this.setState({ loading: true });
-
     let storedPlates = [];
     var storage = Firebase.storage();
     var pathReference = storage.ref('plates/');
 
     pathReference.listAll()
     .then((res) => {
-      res.items.forEach((itemRef) => {
-        itemRef.getDownloadURL()
+      res.items.forEach(async (itemRef) => {
+        await itemRef.getDownloadURL()
         .then((url) => {
-          let plateObj = {};
-          
+          let plateObj = {};          
           if(url.includes('umwelt'))
             plateObj = {
               category: 'umwelt',
               url: url,
+              preStored: true,
             }
           else if(url.includes('rassismus'))
           plateObj = {
             category: 'rassismus',
             url: url,
+            preStored: true,
           }
           else if(url.includes('mental'))
           plateObj = {
             category: 'mental-health',
             url: url,
+            preStored: true,
           }
           else if(url.includes('feminism'))
           plateObj = {
             category: 'feminismus',
             url: url,
+            preStored: true,
           }
-          console.log(plateObj);
           storedPlates[url] = (plateObj);
-          // toString().contains('umwelt')
         })
-      });
-      this.setState({
-        loading: false,
-        storedPlates: storedPlates,
+
+        this.setState({
+          storedPlates: storedPlates,
+        })
+
+        this.getUserData();
       })
     }).catch((error) => {
       // Uh-oh, an error occurred!
     });
   }
 
-  getUserData = () => {
+  async getUserData() {
     this.setState({ loading: true });
   
     let ref = Firebase.database().ref('/opinions');
     ref.on('value', snapshot => {
       const state = snapshot.val();
+
+      let mergedPlates = {
+        ...this.state.storedPlates,
+        ...state
+      }
+
       this.setState({
-        opinions: state,
+        loading: false,
+        opinions: mergedPlates,
       });
     });
   };
@@ -94,7 +102,6 @@ class Gallery extends React.Component {
 
   render() {
     const { loading, opinions, storedPlates, category, showAll } = this.state;
-
     return (
       <div className='container'>
         <div className='gallery'>
@@ -147,28 +154,35 @@ class Gallery extends React.Component {
               <h1>lädt ...</h1>
             </div>
           }
-          {Object.keys(storedPlates).filter(plate => (category !== 'all') ? (storedPlates[plate].category === category) : (storedPlates !== null)).map((key, id) => 
-            <div
-              key={key}
-              className='card float-left'
-              style={{ width: '18rem', marginRight: '1rem' }}
-            >
-              <div className='card-body'>
-                <img className='storedPlate' src={storedPlates[key].url} />
+          <div className='gallery-wall'>
+            {/* {Object.keys(storedPlates).filter(plate => (category !== 'all') ? (storedPlates[plate].category === category) : (storedPlates !== null)).map((key, id) => 
+              <div
+                key={key}
+                className='card float-left large'
+                style={{ width: '18rem', marginRight: '1rem' }}
+              >
+                <div className='card-body'>
+                  <img className='storedPlate' src={storedPlates[key].url} />
+                </div>
               </div>
-            </div>
-          )}
-          {Object.keys(opinions).filter(opinion => (category !== 'all') ? (opinions[opinion].category === category) : (opinions !== null)).map((key, id) => 
-            <div
-              key={key}
-              className='card float-left'
-              style={{ width: '18rem', marginRight: '1rem' }}
-            >
-              <div className='card-body'>
-                <Plate opinion={opinions[key]} />
+            )} */}
+            {Object.keys(opinions).filter(opinion => (category !== 'all') ? (opinions[opinion].category === category) : (opinions !== null)).map((key, id) => 
+              <div
+                key={key}
+                className='card float-left'
+                style={{ width: '18rem', marginRight: '1rem' }}
+              >
+                <div className='card-body'>
+                  { opinions[key].preStored &&
+                    <img className='storedPlate' src={opinions[key].url} />
+                  }
+                  { !opinions[key].preStored &&
+                    <Plate opinion={opinions[key]} />
+                  }
+                </div>
               </div>
-            </div>
-          )}
+            )}
+          </div>
           {/* {storedPlates.map(
             function(plate){
               return <img className='storedPlate' src={plate.url} />

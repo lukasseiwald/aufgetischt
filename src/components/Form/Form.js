@@ -28,6 +28,7 @@ class Form extends React.Component {
           category: category,
           gender: gender,
           text: text,
+          preStored: false,
         })
     }
 
