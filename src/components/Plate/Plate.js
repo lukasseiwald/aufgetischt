@@ -46,7 +46,7 @@ class Plate extends React.Component {
         <button
           className='plate-clickable'
           onClick={this.showDetailToggle}>
-          <svg width={800} height={600} xmlns="http://www.w3.org/2000/svg" className="plate">
+          {/* <svg width={800} height={600} xmlns="http://www.w3.org/2000/svg" className="plate">
             <circle
               strokeWidth={5}
               stroke="#000"
@@ -76,7 +76,8 @@ class Plate extends React.Component {
             >
               {opinion.text}
             </text>
-          </svg>
+          </svg> */}
+          {opinion.text}
         </button>
         <Modal 
            isOpen={showDetail}
