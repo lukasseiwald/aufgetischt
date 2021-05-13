@@ -126,7 +126,7 @@ class Form extends React.Component {
                         id='radio-f'
                         className='radioButton'
                       />
-                      <label htmlFor='radio-f'>F</label>
+                      <label htmlFor='radio-f'>W</label>
                       <input
                         type='radio'
                         name='gender'
@@ -143,7 +143,7 @@ class Form extends React.Component {
                         color: activeAgeInput ? '#FF10F0' : '#000',
                       }}
                     >
-                      <label>AGE:</label>
+                      <label>ALTER:</label>
                       <input
                         type='number'
                         ref='age'

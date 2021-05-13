@@ -80,7 +80,7 @@ input[type="radio"] {
 
 input[type="radio"] + label {
   margin: 5px;
-  padding: 10px 16px;
+  padding: 10px 14px;
   border-radius: 40px;
   border: 2px solid #333;
   color: #333;
@@ -91,7 +91,7 @@ input[type="radio"] + label {
 }
 
 input[type="radio"]#radio-f + label {
-  padding: 10px 19px;
+  padding: 10px 14px;
 }
 
 input[type="radio"]#radio-d + label {
@@ -111,9 +111,11 @@ input[type="radio"]:focus + label{
 .input-age {
   border: 2px solid #FF10F0;
   color: #FF10F0;
-  margin: -11px 0.5em;
+  margin: -13px 0.5em;
   padding-left: 13px;
   padding-right: 0;
+  padding-top: 2px;
+  padding-bottom: 2px;
   border-radius: 40px;
   display: flex;
   align-items: center;
@@ -146,14 +148,14 @@ input[type="number"]:placeholder-shown {
   background-color: transparent;
   border: 2px solid #000;
   color: #000;
-  margin: -11px 0.5em;
-  padding: 0px 13px;
+  margin: -12px 0.5em;
+  padding: 0px 10px;
   border-radius: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: bold;
-  height: 43px;
+  height: 49px;
   outline: none;
   cursor: pointer;
 }
@@ -194,7 +196,7 @@ input[type="number"]:placeholder-shown {
 
   input[type="radio"]#radio-f + label {
     font-size: 0.9em;
-    padding: 10px 16px;
+    padding: 10px 14px;
   }
   
   input[type="radio"]#radio-d + label {
@@ -207,7 +209,14 @@ input[type="number"]:placeholder-shown {
   }
 
   .input-age {
-    height: 40px;
+    height: 38px;
     font-size: 0.9em;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin: -10px 0.5em;
+  }
+
+  .button-submit {
+    margin-top: 2.5em !important;
   }
 }
