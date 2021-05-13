@@ -55,7 +55,7 @@ class TriggerWarning extends React.Component {
           className='triggerTextContainer'
         >
           <p className='triggerText'>
-            Warnung vor möglicher rassistischer Hassrede, verbaler sexualisierter Gewalt gegenüber Frauen und Männern. Sowie diverse Ansicht zu den Themen Umwelt und Gesundheit. 
+            Warnung vor möglicher rassistischer Hassrede, verbaler sexualisierter Gewalt gegenüber Frauen und Männern. Sowie diverse Ansichten zu den Themen Umwelt und mentaler Gesundheit.
           </p>
           <p className='triggerText'>
             Außderdem verwendet diese Website Cookies, um Ihre Interaktion mit der Website zu verwalten. 
