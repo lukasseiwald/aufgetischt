@@ -39,8 +39,9 @@
 .aboutButtonTextMobile {
   top: 1em !important;
   left: auto !important;
-  right: 1em !important;
+  right: 2em !important;
   font-size: 1em !important;
+  font-weight: 100 !important;
 }
 
 .openAboutButton p {

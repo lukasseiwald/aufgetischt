@@ -6,33 +6,38 @@ import aboutButtonImg from '../../assets/aboutButton.png';
 
 class OpenAboutButton extends React.Component {
   render() {
-    return (
-      <div className='openAboutButton'>
-        <Link
-          to={{pathname: '/about'}}>
-            { !isMobile && 
-              <div className='openAboutButtonContent'>
-                <img
-                  src={aboutButtonImg}
-                  className='aboutButtonImg'
-                />
-                <p
-                  className='aboutButtonText'
-                >
-                  Was ist aufgetischt?
-                </p>
-              </div>
-            }
-            { isMobile && 
+    if(!isMobile) {
+      return (
+        <div className='openAboutButton'>
+          <Link to={{pathname: '/about'}}>
+            <div className='openAboutButtonContent'>
+              <img
+                src={aboutButtonImg}
+                className='aboutButtonImg'
+              />
               <p
-                className='aboutButtonText aboutButtonTextMobile'
+                className='aboutButtonText'
               >
-                → über aufgetischt:
+                Was ist aufgetischt?
               </p>
-            }
-        </Link>
-      </div>
-    )
+            </div>
+          </Link>
+        </div>
+      );
+    }
+    if(isMobile) {
+      return (
+        <div className='openAboutButtonMobile'>
+          <Link to={{pathname: '/about'}}>
+            <p
+              className='aboutButtonText aboutButtonTextMobile'
+            >
+              → über aufgetischt:
+            </p>
+          </Link>
+        </div>
+      );
+    }
   }
 }
 
