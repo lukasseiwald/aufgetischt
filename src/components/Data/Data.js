@@ -9,12 +9,12 @@ class Data extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <div className='container'>
+        <div className='impressumContainer'>
           <Link
             className='openFormButton'
             to={{pathname: '/'}}>
-            <p>
-              &#8594; tisch deine Meinung auf!
+            <p className='aboutButtonTextMobile'>
+              → Tisch uns Deine Meinung auf:
             </p>
           </Link>
           <div className='impressum-content'>
@@ -396,7 +396,7 @@ class Data extends React.Component {
             </ul>
             <p>
               Sie können auch grundsätzlich Ihren Browser so einrichten, dass Sie immer informiert werden, wenn ein Cookie gesetzt werden soll. Dann können Sie immer individuell entscheiden, ob Sie das Cookie zulassen wollen oder nicht.
-              Instagram ist ein Tochterunternehmen von Facebook Inc. und Facebook ist aktiver Teilnehmer beim EU-U.S. Privacy Shield Framework. Dieses Framework stellt eine korrekte Datenübertragung zwischen den USA und der Europäischen Union sicher. Unter <a href='https://www.privacyshield.gov/participant?id=a2zt0000000GnywAAC'>https://www.privacyshield.gov/participant?id=a2zt0000000GnywAAC</a> erfahren Sie mehr darüber. Wir haben versucht, Ihnen die wichtigsten Informationen über die Datenverarbeitung durch Instagram näherzubringen. Auf <a href='https://help.instagram.com/519522125107875'>https://help.instagram.com/519522125107875</a>
+              Instagram ist ein Tochterunternehmen von Facebook Inc. und Facebook ist aktiver Teilnehmer beim EU-U.S. Privacy Shield Framework. Dieses Framework stellt eine korrekte Datenübertragung zwischen den USA und der Europäischen Union sicher. Unter <a href='https://www.privacyshield.gov/participant?id=a2zt0000000GnywAAC'>https://www.privacyshield.gov/participant?id=a2zt0000000GnywAAC</a> erfahren Sie mehr darüber. Wir haben versucht, Ihnen die wichtigsten Informationen über die Datenverarbeitung durch Instagram näherzubringen. Auf <a href='https://help.instagram.com/519522125107875'>https://help.instagram.com/519522125107875 </a>
               können Sie sich noch näher mit den Datenrichtlinien von Instagram auseinandersetzen.
               Quelle: Erstellt mit dem <a href='https://www.firmenwebseiten.at/datenschutz-generator/'>Datenschutz Generator</a> von firmenwebseiten.at
             </p>

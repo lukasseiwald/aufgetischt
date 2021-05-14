@@ -1,6 +1,7 @@
 .App {
-  font-family: 'Roboto-Regular';
   overflow: hidden;
+  display: flex;
+  justify-content: center;
 }
 
 .header {
@@ -8,7 +9,8 @@
 }
 
 .app-container {
-
+  position: relative;
+  max-width: 100em;
 }
 
 .section-form {

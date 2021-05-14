@@ -9,12 +9,12 @@ class About extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <div className='container'>
+        <div className='about-container'>
           <Link
             className='openFormButton'
             to={{pathname: '/'}}>
-            <p>
-              &#8594; tisch deine Meinung auf!
+            <p className='aboutButtonTextMobile'>
+              → Tisch uns Deine Meinung auf:
             </p>
           </Link>
           <div className='about-content'>

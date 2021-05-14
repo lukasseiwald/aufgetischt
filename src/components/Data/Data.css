@@ -1,15 +1,3 @@
-.container {
-  font-family: 'Acumin-Light';
-  width: 90%;
-  max-width: 70em;
-}
-
-.about-content {
-  position: absolute;
-  top: 6em;
-  left: 2em;
-}
-
 #about-title {
   font-weight: 600;
   font-size: 3em;
@@ -18,18 +6,6 @@
 
 #about-description {
   font-size: 3em;
-}
-
-.openFormButton {
-  border: none;
-  background: none;
-  height: 3em;
-  outline: none;
-  cursor: pointer;
-  text-decoration: none;
-  position: absolute;
-  top: 2em;
-  right: 3em;
 }
 
 .openFormButton p {
