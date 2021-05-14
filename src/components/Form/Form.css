@@ -9,13 +9,13 @@ form {
   justify-content: flex-start;
   flex-direction: column;
   align-items: flex-start;
-  padding: 1em;
+  padding: 0em;
 }
 
 .title-category {
   font-size: 1.4em;
   text-transform: uppercase;
-  padding-left: 0.2em;
+  padding-left: 0.1em;
   margin: 0;
 }
 
@@ -30,7 +30,6 @@ form {
 
 .form-header {
   display: flex;
-  padding-top: 1em;
 }
 
 .bottom-form {
@@ -53,6 +52,12 @@ form {
   flex-wrap: wrap;
   font-size: 0.8em;
   font-weight: 800;
+}
+
+.category-radio + label {
+  flex: 1 0 auto !important;
+  width: max-content !important;
+  text-align: center;
 }
 
 textarea {
@@ -172,6 +177,10 @@ input[type="number"]:placeholder-shown {
     font-size: 1.6em;
   }
 
+  #form-title {
+    font-size: 3em;
+  }
+
   .bottom-form {
     flex-direction: column;
   }
@@ -182,7 +191,7 @@ input[type="number"]:placeholder-shown {
 
   .form-categories {
     padding-top: 0em;
-    margin-top: 6em;
+    font-size: 0.7em !important;
   }
 
   input[type="radio"] + label {

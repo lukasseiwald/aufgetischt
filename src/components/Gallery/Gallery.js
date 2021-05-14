@@ -112,7 +112,7 @@ class Gallery extends React.Component {
               name='category-gallery'
               value='all'
               id='radio-category-gallery-0'
-              className='radioButton'
+              className='radioButton category-radio'
               checked={showAll}
             />
             <label htmlFor='radio-category-gallery-0'>ALLES</label>
@@ -121,7 +121,7 @@ class Gallery extends React.Component {
               name='category-gallery'
               value='rassismus'
               id='radio-category-gallery-1'
-              className='radioButton'
+              className='radioButton category-radio'
             />
             <label htmlFor='radio-category-gallery-1'>RASSISMUS</label>
             <input
@@ -129,7 +129,7 @@ class Gallery extends React.Component {
               name='category-gallery'
               value='umwelt'
               id='radio-category-gallery-2'
-              className='radioButton'
+              className='radioButton category-radio'
             />
             <label htmlFor='radio-category-gallery-2'>UMWELTSCHUTZ</label>
             <input
@@ -137,7 +137,7 @@ class Gallery extends React.Component {
               name='category-gallery'
               value='feminismus'
               id='radio-category-gallery-3'
-              className='radioButton'
+              className='radioButton category-radio'
             />
             <label htmlFor='radio-category-gallery-3'>FEMINISMUS</label>
             <input
@@ -145,7 +145,7 @@ class Gallery extends React.Component {
               name='category-gallery'
               value='mental-health'
               id='radio-category-gallery-4'
-              className='radioButton'
+              className='radioButton category-radio'
             />
             <label htmlFor='radio-category-gallery-4'>MENTALE GESUNDHEIT</label>
           </div>
@@ -155,17 +155,6 @@ class Gallery extends React.Component {
             </div>
           }
           <div className='gallery-wall'>
-            {/* {Object.keys(storedPlates).filter(plate => (category !== 'all') ? (storedPlates[plate].category === category) : (storedPlates !== null)).map((key, id) => 
-              <div
-                key={key}
-                className='card float-left large'
-                style={{ width: '18rem', marginRight: '1rem' }}
-              >
-                <div className='card-body'>
-                  <img className='storedPlate' src={storedPlates[key].url} />
-                </div>
-              </div>
-            )} */}
             {Object.keys(opinions).filter(opinion => (category !== 'all') ? (opinions[opinion].category === category) : (opinions !== null)).map((key, id) => 
               <div
                 key={key}
@@ -183,10 +172,6 @@ class Gallery extends React.Component {
               </div>
             )}
           </div>
-          {/* {storedPlates.map(
-            function(plate){
-              return <img className='storedPlate' src={plate.url} />
-          })} */}
         </div>
       </div>
     )

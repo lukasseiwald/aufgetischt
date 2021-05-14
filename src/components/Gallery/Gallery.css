@@ -3,7 +3,6 @@
 }
 
 .form-categories {
-  margin-top: 3em;
   margin-bottom: 1em;
   margin-right: 1em;
   display: flex;
@@ -11,6 +10,12 @@
   justify-content: flex-start;
   flex-wrap: wrap;
   font-size: 0.8em;
+}
+
+.category-radio + label {
+  flex: 1 0 auto !important;
+  width: max-content !important;
+  text-align: center;
 }
 
 input[type="radio"] + label {

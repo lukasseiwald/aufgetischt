@@ -1,5 +1,6 @@
 import React from 'react';
 import Firebase from 'firebase';
+import { isMobile } from 'react-device-detect';
 import './Form.css';
 
 class Form extends React.Component {
@@ -56,7 +57,6 @@ class Form extends React.Component {
           <div className='row'>
             <div className='col-xl-12'>
               <form onSubmit={this.handleSubmit}>
-                {/* <p className='title-category'>Wähle dein Thema:</p> */}
                 <div className='form-row form-header'>
                   <div className='col-md-6 form-categories' ref='category' onChange={this.onChangeCategory}>
                     <input
@@ -64,7 +64,7 @@ class Form extends React.Component {
                       name='category'
                       value='rassismus'
                       id='radio-category-1'
-                      className='radioButton'
+                      className='radioButton category-radio'
                     />
                     <label htmlFor='radio-category-1'>RASSISMUS</label>
                     <input
@@ -72,7 +72,7 @@ class Form extends React.Component {
                       name='category'
                       value='umwelt'
                       id='radio-category-2'
-                      className='radioButton'
+                      className='radioButton category-radio'
                     />
                     <label htmlFor='radio-category-2'>UMWELTSCHUTZ</label>
                     <input
@@ -80,7 +80,7 @@ class Form extends React.Component {
                       name='category'
                       value='feminismus'
                       id='radio-category-3'
-                      className='radioButton'
+                      className='radioButton category-radio'
                     />
                     <label htmlFor='radio-category-3'>FEMINISMUS</label>
                     <input
@@ -88,7 +88,7 @@ class Form extends React.Component {
                       name='category'
                       value='mental-health'
                       id='radio-category-4'
-                      className='radioButton'
+                      className='radioButton category-radio'
                     />
                     <label htmlFor='radio-category-4'>MENTALE GESUNDHEIT</label>
                   </div>

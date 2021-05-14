@@ -1,8 +1,7 @@
 import React from 'react';
 import './OpenAboutButton.css';
-import {
-  Link,
-} from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { isMobile } from 'react-device-detect';
 import aboutButtonImg from '../../assets/aboutButton.png';
 
 class OpenAboutButton extends React.Component {
@@ -11,17 +10,26 @@ class OpenAboutButton extends React.Component {
       <div className='openAboutButton'>
         <Link
           to={{pathname: '/about'}}>
-            <div className='openAboutButtonContent'>
-              <img
-                src={aboutButtonImg}
-                className='aboutButtonImg'
-              />
+            { !isMobile && 
+              <div className='openAboutButtonContent'>
+                <img
+                  src={aboutButtonImg}
+                  className='aboutButtonImg'
+                />
+                <p
+                  className='aboutButtonText'
+                >
+                  Was ist aufgetischt?
+                </p>
+              </div>
+            }
+            { isMobile && 
               <p
-                className='aboutButtonText'
+                className='aboutButtonText aboutButtonTextMobile'
               >
-                Was ist aufgetischt?
+                → über aufgetischt:
               </p>
-            </div>
+            }
         </Link>
       </div>
     )
