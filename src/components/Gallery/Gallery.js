@@ -106,7 +106,7 @@ class Gallery extends React.Component {
       <div className='container'>
         <div className='gallery'>
           <p id='form-title'>aufgetischt:</p>
-          <div className='col-md-6 form-categories' ref='category-gallery' onChange={this.onChangeCategoryGallery}>
+          <div className='col-md-6 form-categories gallery-categories' ref='category-gallery' onChange={this.onChangeCategoryGallery}>
           <input
               type='radio'
               name='category-gallery'

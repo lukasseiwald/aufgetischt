@@ -12,6 +12,10 @@
   font-size: 0.8em;
 }
 
+.gallery-categories {
+  margin: 4em 0;
+}
+
 .category-radio + label {
   flex: 1 0 auto !important;
   width: max-content !important;

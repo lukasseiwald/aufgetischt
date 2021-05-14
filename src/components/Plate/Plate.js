@@ -41,6 +41,24 @@ class Plate extends React.Component {
     let colors = ['#4D4D4D', '#999999', '#FFFFFF', '#F44E3B', '#FE9200', '#FCDC00', '#DBDF00', '#A4DD00', '#68CCCA', '#73D8FF', '#AEA1FF', '#FDA1FF', '#333333', '#808080', '#cccccc', '#D33115', '#E27300', '#FCC400', '#B0BC00', '#68BC00', '#16A5A5', '#009CE0', '#7B64FF', '#FA28FF', '#000000', '#666666', '#B3B3B3', '#9F0500', '#C45100', '#FB9E00', '#808900', '#194D33', '#0C797D', '#0062B1', '#653294', '#AB149E'];
     let color = colors[Math.floor(Math.random() * colors.length)];
 
+    let thema = '';
+    switch(opinion.category){
+      case 'feminismus': 
+        thema = 'zum Thema "Feminismus"';
+        break;
+      case 'rassismus':
+        thema = 'zum Thema "Rassismus"';
+        break;
+      case 'umwelt':
+        thema = 'zum Thema "Umweltschutz"';
+        break;
+      case 'mental-health':
+        thema = 'zum Thema "Mentale Gesundheit"'
+        break;
+      default:
+        break;
+    } 
+
     return (
       <div className='container-plate'>
         <button
@@ -87,7 +105,7 @@ class Plate extends React.Component {
             <div className='plate-detail-1'>
               <h2>aufgetischt:</h2>
               <div className='plate-detail-1-body'>
-                <p className='card-text'>Zum Thema "{opinion.category}"</p>
+                <p className='card-text'>{thema}</p>
                 <p className='card-text'>von {opinion.gender}, {opinion.age} Jahre</p>
               </div>
               <Link
@@ -138,7 +156,7 @@ class Plate extends React.Component {
               <h3
                 className='closeIcon' 
               >
-                X
+                ✕
               </h3>
             </button>
           </div>

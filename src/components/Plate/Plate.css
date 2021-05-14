@@ -17,6 +17,21 @@
   text-align: center;
 }
 
+.ReactModal__Overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ReactModal__Content {
+  border: 2px solid black !important;
+  inset: 20% 5% !important;
+  background: rgb(255, 255, 255);
+  overflow: auto;
+  border-radius: 4px;
+  outline: none;
+}
+
 .plate-detail {
   display: flex;
   justify-content: space-evenly;
@@ -37,6 +52,7 @@
 
 .plate-detail-1-body {
   margin-top: 3em;
+  margin-left: 1em;
 }
 
 .plate-detail-1 h2 {
@@ -44,7 +60,7 @@
   font-weight: 100;
   text-align: center;
   width: 100%;
-  font-size: 8vw;
+  font-size: 6vw;
   margin: 0;
 }
 
@@ -76,15 +92,23 @@
   color: #FF10F0;
 }
 
+.nachschlag p {
+  font-size: 1.4em;
+}
+
 .plate-detail-2 {
   width: 50%;
   align-self: center;
 }
 
+.card-text {
+  text-align: left !important;
+}
+
 .closeModalButton {
   position: absolute;
-  top: 1em;
-  right: 1em;
+  top: -2em;
+  right: 2em;
   border: none;
   background: none;
   outline: none;
@@ -92,7 +116,18 @@
 }
 
 .closeIcon {
-  font-size: 3em;
+  font-size: 3.5em;
+  font-weight: 100;
+}
+
+@media only screen and (min-width: 2000px) {
+  .ReactModal__Content {
+    inset: 10% 15% !important;
+  }
+  .plate-detail-1 h2 {
+    width: 100%;
+    font-size: 4vw;
+  }
 }
 
 @media only screen and (max-width: 700px) {
