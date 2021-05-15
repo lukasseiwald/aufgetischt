@@ -1,6 +1,7 @@
 import React from 'react';
 import Modal from 'react-modal';
 import './Plate.css';
+import PlateSvg from '../../assets/Teller/plateSvg';
 import {
   Link,
 } from 'react-router-dom';
@@ -42,6 +43,9 @@ class Plate extends React.Component {
     let color = colors[Math.floor(Math.random() * colors.length)];
 
     let thema = '';
+    let gender = '';
+    let age = '';
+
     switch(opinion.category){
       case 'feminismus': 
         thema = 'zum Thema "Feminismus"';
@@ -53,17 +57,45 @@ class Plate extends React.Component {
         thema = 'zum Thema "Umweltschutz"';
         break;
       case 'mental-health':
-        thema = 'zum Thema "Mentale Gesundheit"'
+        thema = 'zum Thema "Mentale Gesundheit"';
         break;
       default:
         break;
     } 
+
+    switch(opinion.gender){
+      case 'm': 
+        gender = 'männlich';
+        break;
+      case 'f':
+        gender = 'weiblich';
+        break;
+      case 'd':
+        gender = 'diversem gender';
+        break;
+      case '-':
+        gender = 'unbekanntem Gender';
+        break;
+      default:
+        gender = 'unbekanntem Gender';
+        break;
+    }
+
+    switch(opinion.age) {
+      case '-':
+        age = ', unbekanntem Alter'
+        break;
+      default:
+        age = `, ${opinion.age} Jahre alt`;
+        break;
+    }
 
     return (
       <div className='container-plate'>
         <button
           className='plate-clickable'
           onClick={this.showDetailToggle}>
+          <PlateSvg text={opinion.text} />
           {/* <svg width={800} height={600} xmlns="http://www.w3.org/2000/svg" className="plate">
             <circle
               strokeWidth={5}
@@ -95,7 +127,6 @@ class Plate extends React.Component {
               {opinion.text}
             </text>
           </svg> */}
-          {opinion.text}
         </button>
         <Modal 
            isOpen={showDetail}
@@ -106,7 +137,7 @@ class Plate extends React.Component {
               <h2>aufgetischt:</h2>
               <div className='plate-detail-1-body'>
                 <p className='card-text'>{thema}</p>
-                <p className='card-text'>von {opinion.gender}, {opinion.age} Jahre</p>
+                <p className='card-text'>von {gender}{age}</p>
               </div>
               <Link
                 to='/'

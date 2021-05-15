@@ -39,12 +39,21 @@ function App() {
           </Route>
           <Route path='/about'>
             <About />
+            <div className='footer-sub-container'>
+              <Footer />
+            </div>
           </Route>
           <Route path='/impressum'>
             <Impressum />
+            <div className='footer-sub-container'>
+              <Footer />
+            </div>
           </Route>
           <Route path='/data'>
             <Data />
+            <div className='footer-sub-container'>
+              <Footer />
+            </div>
           </Route>
         </Switch>
       </BrowserRouter>
