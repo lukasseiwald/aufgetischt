@@ -2,6 +2,7 @@ import React from 'react';
 import Firebase from 'firebase';
 import { isMobile } from 'react-device-detect';
 import './Form.css';
+import AufgetischtLogo from '../../assets/aufgetischt_logo.js'
 
 class Form extends React.Component {
   constructor(props) {
@@ -93,7 +94,7 @@ class Form extends React.Component {
                     <label htmlFor='radio-category-4'>MENTALE GESUNDHEIT</label>
                   </div>
                 </div>
-                <p id='form-title'>aufgetischt:</p>
+                <AufgetischtLogo />
                 <div className='form-row'>
                   <input type='hidden' ref='uid' />
                   <div className='form-group col-md-6 text-area'>

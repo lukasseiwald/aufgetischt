@@ -2,6 +2,7 @@ import React from 'react';
 import Firebase from 'firebase';
 import './Gallery.css';
 import Plate from '../Plate/Plate';
+import AufgetischtLogo from '../../assets/aufgetischt_logo.js'
 
 class Gallery extends React.Component {
   constructor(props) {
@@ -105,7 +106,7 @@ class Gallery extends React.Component {
     return (
       <div className='container'>
         <div className='gallery'>
-          <p id='form-title'>aufgetischt:</p>
+          <AufgetischtLogo />
           <div className='col-md-6 form-categories gallery-categories' ref='category-gallery' onChange={this.onChangeCategoryGallery}>
           <input
               type='radio'
