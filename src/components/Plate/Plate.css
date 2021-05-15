@@ -9,12 +9,10 @@
   border: none;
   background: none;
   cursor: pointer;
-  outline: none;
-  /* background-color: #FF10F0; */
-  border-radius: 22em;
-  width: 16em;
-  height: 16em;
-  text-align: center;
+  width: 18em;
+  height: 17.3em;
+  justify-content: center;
+  align-items: center;
 }
 
 .ReactModal__Overlay {
