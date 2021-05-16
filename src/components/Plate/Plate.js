@@ -96,37 +96,6 @@ class Plate extends React.Component {
           className='plate-clickable'
           onClick={this.showDetailToggle}>
           <PlateSvg text={opinion.text} />
-          {/* <svg width={800} height={600} xmlns="http://www.w3.org/2000/svg" className="plate">
-            <circle
-              strokeWidth={5}
-              stroke="#000"
-              cy={300}
-              cx={400}
-              fill={color}
-              r={281}
-            />
-            <circle
-              strokeWidth={5}
-              stroke="#000"
-              cy={300}
-              cx={399}
-              fill="#fff"
-              r={204}
-            />
-            <text
-              fontWeight="bold"
-              fontFamily="monospace"
-              fontSize={30}
-              y={307}
-              x={246}
-              fillOpacity="null"
-              strokeOpacity="null"
-              strokeWidth={0}
-              stroke="#000"
-            >
-              {opinion.text}
-            </text>
-          </svg> */}
         </button>
         <Modal 
            isOpen={showDetail}
@@ -148,37 +117,7 @@ class Plate extends React.Component {
               </Link>
             </div>
             <div className='plate-detail-2'>
-              <svg width={800} height={600} xmlns="http://www.w3.org/2000/svg" className="plate">
-                <circle
-                  strokeWidth={5}
-                  stroke="#000"
-                  cy={300}
-                  cx={400}
-                  fill={color}
-                  r={281}
-                />
-                <circle
-                  strokeWidth={5}
-                  stroke="#000"
-                  cy={300}
-                  cx={399}
-                  fill="#fff"
-                  r={204}
-                />
-                <text
-                  fontWeight="bold"
-                  fontFamily="monospace"
-                  fontSize={30}
-                  y={307}
-                  x={246}
-                  fillOpacity="null"
-                  strokeOpacity="null"
-                  strokeWidth={0}
-                  stroke="#000"
-                >
-                  {opinion.text}
-                </text>
-              </svg>
+              <PlateSvg text={opinion.text} />
             </div>
             <button
               onClick={this.showDetailToggle}

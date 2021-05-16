@@ -44,6 +44,11 @@
   justify-content: center;
 }
 
+.link-to-instagram {
+  display: flex;
+  margin-left: 0.5em;
+}
+
 .social-row {
   display: flex;
   flex-direction: row;
@@ -164,8 +169,7 @@ a {
 }
 
 .row-flex svg {
-  width: 8em;
-  padding-left: 1em;
+  align-self: center;
 }
 
 .arrowUp {

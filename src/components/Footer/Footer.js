@@ -83,7 +83,9 @@ class Footer extends React.Component {
             <p>Copyright © 2021 aufgetischt</p>
             <div className='row-flex'>
               <p>Eine Intervention von </p>
-              <StudioStoerungLogo />
+              <a href='https://www.instagram.com/studiostoerung/' target='_blank' rel='noreferrer' className='link-to-instagram'>
+                <StudioStoerungLogo />
+              </a>
             </div>
           </div>
           <div className='flex-row-item'>
