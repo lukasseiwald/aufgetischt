@@ -1,6 +1,5 @@
 import * as React from 'react';
 import './plateSvg.css';
-import Text from 'react-svg-text';
 import SvgPlate1 from './teller_1.svg'; 
 import SvgPlate2 from './teller_2.svg'; 
 import SvgPlate3 from './teller_3.svg'; 
@@ -12,16 +11,24 @@ function PlateSvg(props) {
     SvgPlate1,
     SvgPlate2,
     SvgPlate3,
-  ]
+  ];
 
-  var plate = plates[Math.floor(Math.random() * plates.length)];
+  const colors = [
+    '#FF10F0',
+    '#00FF00',
+    '#FF6600'
+  ];
 
+  let plate = plates[Math.floor(Math.random() * plates.length)];
+  let color = colors[Math.floor(Math.random() * colors.length)];
+  console.log(color);
+  
   return (
     <div
        className='plateBg'
        style={{ backgroundImage: `url(${plate})` }}
     > 
-      <p>
+      <p style={{ color: color, fontFamily: 'Roboto'}}>
         {text}
       </p>
     </div>

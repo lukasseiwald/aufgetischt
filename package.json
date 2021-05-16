@@ -15,7 +15,6 @@
     "react-modal": "^3.13.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
-    "react-svg-text": "^0.1.2",
     "react-tag-input": "^6.5.2",
     "web-vitals": "^1.0.1"
   },
