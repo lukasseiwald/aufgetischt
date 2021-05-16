@@ -3,9 +3,11 @@ import './Footer.css';
 import {
   Link,
 } from 'react-router-dom';
-import fhSalzburgLogo from '../../assets/fh_salzburg.png'
-import arrowUp from '../../assets/aufgetischt_Pfeil.png'
-import StudioStoerungLogo from '../../assets/StudioStoerungLogo'
+import fhSalzburgLogo from '../../assets/fh_salzburg.png';
+import arrowUp from '../../assets/aufgetischt_Pfeil.png';
+import StudioStoerungLogo from '../../assets/StudioStoerungLogo';
+import AufgetischtLogo from '../../assets/aufgetischt_logo.js';
+
 
 
 const Mailto = ({ email, subject = '', body = '', children }) => {
@@ -35,38 +37,36 @@ class Footer extends React.Component {
       > 
         <div className='flex-row-container'>
           <div className='flex-row-item big-row column-content'>
-            <p
-              className='footer-title'
-            >
-              aufgetischt:
-            </p>
-            <p>
+            <AufgetischtLogo className='footer-logo' />
+            <p className='footer-description'>
               Der Tellerrand ist nicht das Ende,
               es gibt den ganzen Tisch.
             </p>
           </div>
           <div className='flex-row-item big-row social-row'>
-            <div
-              className='social-icons'
-            >
-              <p>mail</p>
-              <p>ig</p>
-            </div>
-            <div
-              className='social-links'
-            >
-              <Mailto email='info@aufgetischt.link' subject='Aufgetischtes' body=''>
-                <div className='social'>
-                  <p>
-                      info@aufgetischt.link
-                  </p>
-                </div>
-              </Mailto>
-              <a href='https://www.instagram.com/aufgetischt.link/' target='_blank' rel='noreferrer'>
-                <div className='social'>
-                  <p>@hierwirdaufgetischt</p>
-                </div>
-              </a>
+            <div className='social-icons-container'>
+              <div
+                className='social-icons'
+              >
+                <p>mail</p>
+                <p>ig</p>
+              </div>
+              <div
+                className='social-links'
+              >
+                <Mailto email='info@aufgetischt.link' subject='Aufgetischtes' body=''>
+                  <div className='social'>
+                    <p>
+                        info@aufgetischt.link
+                    </p>
+                  </div>
+                </Mailto>
+                <a href='https://www.instagram.com/aufgetischt.link/' target='_blank' rel='noreferrer'>
+                  <div className='social'>
+                    <p>@hierwirdaufgetischt</p>
+                  </div>
+                </a>
+              </div>
             </div>
           </div>
           <div className='flex-row-item big-row column-content'>
@@ -74,7 +74,7 @@ class Footer extends React.Component {
               src={fhSalzburgLogo}
               className='fhSalzburg'
             />
-            <p>Ein Bachelorprojekt im Studiengang MultiMediaArt an der FH Salzburg</p>
+            <p className='footer-description'>Ein Bachelorprojekt im Studiengang MultiMediaArt an der FH Salzburg</p>
           </div>
           <div
             className='flex-row-item small-row column-flex'

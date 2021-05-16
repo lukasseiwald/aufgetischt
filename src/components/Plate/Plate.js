@@ -106,7 +106,7 @@ class Plate extends React.Component {
               <h2>aufgetischt:</h2>
               <div className='plate-detail-1-body'>
                 <p className='card-text'>{thema}</p>
-                <p className='card-text'>von {gender}{age}</p>
+                <p className='card-text'>von {gender}{age}.</p>
               </div>
               <Link
                 to='/'

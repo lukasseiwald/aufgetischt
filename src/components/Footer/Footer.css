@@ -20,12 +20,9 @@
   display: flex;
 }
 
-.footer-title {
-  font-weight: 300;
-  font-size: 2em;
-  margin: 0;
-  letter-spacing: 0.03em;
-  padding-left: 1em !important;
+.footer-logo {
+  width: 15em;
+  padding-left: 2em;
 }
 
 
@@ -44,7 +41,12 @@
   justify-content: center;
 }
 
+.footer-description {
+  margin-bottom: 4em;
+}
+
 .link-to-instagram {
+  height: 3em;
   display: flex;
   margin-left: 0.5em;
 }
@@ -57,16 +59,23 @@
   text-decoration: none;
 }
 
-.social-icons {
-  padding-right: 2em;
-  height: 6em;
+.social-icons-container {
+  display: flex;
+}
+
+.social-icons p {
+  padding-left: 2em;
+  margin-bottom: 0;
+  margin-top: 0.5em;
 }
 
 .social-links {
-  height: 6em;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
+
+}
+
+.social-links a {
+  margin-bottom: 0;
+  margin-top: 0.5em;
 }
 
 a {
@@ -74,9 +83,11 @@ a {
 }
 
 .social p {
-  margin: 0;
   color: #333;
   text-decoration: none;
+  padding-left: 2em;
+  margin-bottom: 0;
+  margin-top: 0.5em;
 }
 
 .social:hover p {
@@ -114,14 +125,15 @@ a {
 }
 
 .big-row {
-  height: 200px !important;
+  height: 240px !important;
   align-items: center;
   justify-content: flex-start;
 }
 
 .small-row {
-  justify-content: center;
-  align-items: flex-start;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
 } 
 
 .flex-row-container > .flex-row-item {
@@ -141,6 +153,15 @@ a {
   justify-content: center !important;
 }
 
+#copyright-section {
+  display: flex;
+  flex-direction: row;
+}
+
+#copyright-section p {
+  font-size: 1em;
+}
+
 /* .column-content p {
   padding-left: 2em;
 } */
@@ -150,7 +171,7 @@ a {
 }
 
 .fhSalzburg {
-  width: 5em;
+  width: 4em;
   padding-left: 2em;
 }
 
@@ -162,10 +183,12 @@ a {
 .row-flex {
   display: flex;
   flex-direction: row;
+  margin-top: 0.1em;
 }
 
 .row-flex p {
   width: max-content;
+  font-size: 1em;
 }
 
 .row-flex svg {
@@ -179,7 +202,7 @@ a {
 
 @media only screen and (max-width: 1019px) {
   #copyright-section {
-    height: 200px !important;
+    height: 240px !important;
   }
 }
 
