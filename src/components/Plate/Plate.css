@@ -46,18 +46,21 @@
   width: 50%;
   border-right: 1px solid #ccc;
   padding-right: 20px;
+  text-align: left;
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-left: 2em;
 }
 
 .plate-detail-1-body {
-  margin-top: 3em;
-  margin-left: 1em;
+  margin-top: 1em;
 }
 
 .plate-detail-1 h2 {
   font-family: 'ACUMIN-EXTRA-LIGHT';
   font-weight: 100;
-  text-align: center;
-  width: 100%;
   font-size: 6vw;
   margin: 0;
 }
