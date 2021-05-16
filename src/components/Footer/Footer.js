@@ -64,7 +64,7 @@ class Footer extends React.Component {
               </Mailto>
               <a href='https://www.instagram.com/aufgetischt.link/' target='_blank' rel='noreferrer'>
                 <div className='social'>
-                  <p>@aufgetischt.link</p>
+                  <p>@hierwirdaufgetischt</p>
                 </div>
               </a>
             </div>

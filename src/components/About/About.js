@@ -3,6 +3,7 @@ import './About.css';
 import {
   Link,
 } from 'react-router-dom';
+import AufgetischtLogo from '../../assets/aufgetischt_logo.js'
 
 class About extends React.Component {
 
@@ -18,7 +19,7 @@ class About extends React.Component {
             </p>
           </Link>
           <div className='about-content'>
-            <p id='about-title'>aufgetischt:</p>
+            <AufgetischtLogo />
             <p id='about-description'>
               aufgetischt ist eine Kampagne für mehr Diskurs und Meinungsvielfalt.
             </p>

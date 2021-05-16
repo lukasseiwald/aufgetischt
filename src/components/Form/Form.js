@@ -3,6 +3,7 @@ import Firebase from 'firebase';
 import { isMobile } from 'react-device-detect';
 import './Form.css';
 import AufgetischtLogo from '../../assets/aufgetischt_logo.js'
+import OpenAboutButton from '../OpenAboutButton/OpenAboutButton';
 
 class Form extends React.Component {
   constructor(props) {
@@ -58,6 +59,10 @@ class Form extends React.Component {
           <div className='row'>
             <div className='col-xl-12'>
               <form onSubmit={this.handleSubmit}>
+              <div className='instructions-container'>
+                <p className='instructions-categories'>Wähle eines der folgenden Themen und tisch uns Deine Meinung auf:</p>
+                <OpenAboutButton />
+              </div>
                 <div className='form-row form-header'>
                   <div className='col-md-6 form-categories' ref='category' onChange={this.onChangeCategory}>
                     <input
@@ -149,7 +154,7 @@ class Form extends React.Component {
                         type='number'
                         ref='age'
                         className='form-control'
-                        placeholder='...'
+                        placeholder='XX'
                         onChange={() => {
                           if (this.refs.age.value !== '') {
                             this.setState({

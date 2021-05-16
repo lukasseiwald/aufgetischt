@@ -10,17 +10,11 @@ class OpenAboutButton extends React.Component {
       return (
         <div className='openAboutButton'>
           <Link to={{pathname: '/about'}}>
-            <div className='openAboutButtonContent'>
-              <img
-                src={aboutButtonImg}
-                className='aboutButtonImg'
-              />
-              <p
-                className='aboutButtonText'
-              >
-                Was ist aufgetischt?
-              </p>
-            </div>
+            <p
+              className='aboutButtonText aboutButtonTextMobile'
+            >
+              → über aufgetischt:
+            </p>
           </Link>
         </div>
       );

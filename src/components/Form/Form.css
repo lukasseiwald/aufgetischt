@@ -43,6 +43,19 @@ form {
   width: 100%;
 }
 
+.instructions-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 98%;
+  align-items: flex-end;
+}
+
+.instructions-categories {
+  padding-left: 0.7em;
+  font-size: 1.2em;
+}
+
 .form-categories {
   margin-bottom: 1em;
   margin-right: 1em;
@@ -69,7 +82,7 @@ textarea {
   outline: none;
   font-family: 'Acumin-Light';
   font-weight: 100;
-  color: #FF10F0;
+  color: #333;
   resize: none;
 }
 
@@ -136,7 +149,6 @@ input[type="radio"]:focus + label{
   border: none;
   width: 2em;
   border-radius: 22em;
-  padding-right: 0.4em;
   padding-left: 0.4em;
   margin-bottom: 0.1em;
   color: #FF10F0;
@@ -144,6 +156,18 @@ input[type="radio"]:focus + label{
   font-size: 1.2em;
   outline: none;
   font-weight: 800;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }
 
 input[type="number"]:placeholder-shown {
@@ -207,15 +231,15 @@ input[type="number"]:placeholder-shown {
   }
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 720px) {
   textarea {
     height: 6em;
     width: 100%;
     font-size: 1.6em;
   }
 
-  #form-title {
-    font-size: 3em;
+  .instructions-container {
+    flex-direction: column-reverse;
   }
 
   .bottom-form {
@@ -229,6 +253,12 @@ input[type="number"]:placeholder-shown {
   .form-categories {
     padding-top: 0em;
     font-size: 0.7em !important;
+  }
+
+  .form-categories input[type="radio"] + label {
+    margin: 5px;
+    padding: 10px 7px;
+    flex: 30% 1 !important;
   }
 
   input[type="radio"] + label {

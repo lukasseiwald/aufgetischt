@@ -1,9 +1,10 @@
 import * as React from 'react';
+import './aufgetischtLogo.css'
 
 function AufgetischtLogo(props) {
   return (
     <svg
-      style={{width: 400, marginLeft: 15, }}
+      className='logo'
       data-name='Ebene 1'
       xmlns='http://www.w3.org/2000/svg'
       viewBox='0 0 604.3 122.97'
