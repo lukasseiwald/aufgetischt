@@ -60,6 +60,24 @@ input[type="radio"]:focus + label{
   height: 200px;
 }
 
+.beilage-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 13em;
+}
+
+.beilage-container svg {
+  width: 20%;
+  min-width: 13em;
+  margin-right: 2em;
+}
+
+.beilage-container p {
+  width: 45%;
+  max-width: 28em;
+}
+
 /* @media only screen and (max-width: 900px) {
   .gallery-wall {
     grid-template-columns: 40% 40%;

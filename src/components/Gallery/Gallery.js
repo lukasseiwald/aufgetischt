@@ -2,8 +2,8 @@ import React from 'react';
 import Firebase from 'firebase';
 import './Gallery.css';
 import Plate from '../Plate/Plate';
-import AufgetischtLogo from '../../assets/aufgetischt_logo.js'
-
+import AufgetischtLogo from '../../assets/aufgetischt_logo.js';
+import BeilageSvg from '../../assets/aufgetischt_beilage_mit_text';
 class Gallery extends React.Component {
   constructor(props) {
     super(props);
@@ -173,6 +173,12 @@ class Gallery extends React.Component {
               </div>
             )}
           </div>
+        </div>
+        <div className='beilage-container'>
+          <BeilageSvg />
+          <p>
+            Die hier aufgetischten Meinungen sind nicht unsere eigenen und wurden von den Besuchern der Website erstellt. Wir behalten uns vor Äußerungen zu entfernen.
+          </p>
         </div>
       </div>
     )
