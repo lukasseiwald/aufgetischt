@@ -19,16 +19,23 @@ function PlateSvg(props) {
     '#FF6600'
   ];
 
+  const fonts = [
+    'EskapadeFraktur-RegularItalic',
+    'VampiroOne-Regular',
+    'FakirDisplay-Regular',
+    'Komu-A',
+  ]
+
   let plate = plates[Math.floor(Math.random() * plates.length)];
   let color = colors[Math.floor(Math.random() * colors.length)];
-  console.log(color);
+  let font = fonts[Math.floor(Math.random() * fonts.length)];
   
   return (
     <div
        className='plateBg'
        style={{ backgroundImage: `url(${plate})` }}
     > 
-      <p style={{ color: color, fontFamily: 'Roboto'}}>
+      <p style={{ color: color, fontFamily: font, fontSize: 'smaller' }}>
         {text}
       </p>
     </div>

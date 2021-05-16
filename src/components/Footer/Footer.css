@@ -6,6 +6,14 @@
   font-family: 'Acumin-Extra-Light';
 }
 
+.footer-container .flex-row-container{
+  border-top: 1px solid black;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
 .footer {
   width: 100%;
   border: 1px solid black;
@@ -98,13 +106,6 @@ a {
 
 #impressum-link {
   padding-left: 0em;
-}
-
-.flex-row-container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
 }
 
 .big-row {

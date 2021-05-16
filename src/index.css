@@ -33,3 +33,23 @@ body {
   font-family: 'Acumin-Extra-Light';
   src: local('Acumin-Extra-Light'), url(./fonts/Acumin-Extra-Light.ttf) format('truetype');
 }
+
+@font-face {
+  font-family: 'EskapadeFraktur-RegularItalic';
+  src: local('EskapadeFraktur-RegularItalic'), url(./fonts/EskapadeFraktur-RegularItalic.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'VampiroOne-Regular';
+  src: local('VampiroOne-Regular'), url(./fonts/VampiroOne-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'FakirDisplay-Regular';
+  src: local('FakirDisplay-Regular'), url(./fonts/FakirDisplay-Regular.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'Komu-A.ttf';
+  src: local('Komu-A.ttf'), url(./fonts/VampiroOne-Regular.ttf) format('truetype');
+}
