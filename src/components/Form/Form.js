@@ -182,9 +182,16 @@ class Form extends React.Component {
                     <div
                       className='col-md-6 zeichen-anzeige'
                     >
-                      <label>
-                        {zeichen} Zeichen
-                      </label>
+                      { !isMobile &&
+                        <label>
+                          {zeichen} Zeichen
+                        </label>
+                      }
+                      { isMobile &&
+                        <label>
+                          {zeichen}/40
+                        </label>
+                      }
                     </div>
                   </div>
                   <button type='submit' className='btn btn-primary button-submit form-group'>
