@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.1be88876.chunk.css",
-    "main.js": "/static/js/main.fda2f90e.chunk.js",
-    "main.js.map": "/static/js/main.fda2f90e.chunk.js.map",
+    "main.css": "/static/css/main.2a9b1f92.chunk.css",
+    "main.js": "/static/js/main.c93cf217.chunk.js",
+    "main.js.map": "/static/js/main.c93cf217.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.2d50d29e.js",
     "runtime-main.js.map": "/static/js/runtime-main.2d50d29e.js.map",
     "static/js/2.88deb40a.chunk.js": "/static/js/2.88deb40a.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.ed00a5c3.chunk.js": "/static/js/3.ed00a5c3.chunk.js",
     "static/js/3.ed00a5c3.chunk.js.map": "/static/js/3.ed00a5c3.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.1be88876.chunk.css.map": "/static/css/main.1be88876.chunk.css.map",
+    "static/css/main.2a9b1f92.chunk.css.map": "/static/css/main.2a9b1f92.chunk.css.map",
     "static/js/2.88deb40a.chunk.js.LICENSE.txt": "/static/js/2.88deb40a.chunk.js.LICENSE.txt",
     "static/media/index.css": "/static/media/VampiroOne-Regular.5b9f2556.ttf",
     "static/media/AufgetischtFragile_Neonpink.ce1ed4be.png": "/static/media/AufgetischtFragile_Neonpink.ce1ed4be.png",
@@ -24,7 +24,7 @@
   "entrypoints": [
     "static/js/runtime-main.2d50d29e.js",
     "static/js/2.88deb40a.chunk.js",
-    "static/css/main.1be88876.chunk.css",
-    "static/js/main.fda2f90e.chunk.js"
+    "static/css/main.2a9b1f92.chunk.css",
+    "static/js/main.c93cf217.chunk.js"
   ]
 }

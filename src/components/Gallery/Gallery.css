@@ -72,6 +72,18 @@ input[type="radio"]:focus + label{
 
 .grid-expand {
   grid-row: span 2;
+  height: 400px !important;
+  margin: 2em 2em;
+}
+
+.grid-expand .plateBg {
+  grid-row: span 2;
+  width: 400px !important;
+  height: 400px !important;
+}
+
+.grid-mini {
+  grid-row: span 1;
 }
 /* 
 .card:nth-of-type(2n + 2) {

@@ -38,13 +38,15 @@ class PlateSvg extends React.Component {
         break;
     }
 
+    const fontSize = (height > 300) ? '1em' : '0.6em';
+
     return (
       <div
-         className={`plateBg ${(height > 300) ? "big-plate-height" : ""}`}
+         className='plateBg'
          ref={ (divElement) => { this.divElement = divElement } }
-         style={{ backgroundImage: `url(${selectedPlate})`, maxWidth: `${height}px`, textAlign: 'center' }}
+         style={{ backgroundImage: `url(${selectedPlate})`, textAlign: 'center' }}
       > 
-        <div style={{ color: color, fontFamily: font, fontSize: '0.6em', textAlign: 'center',}}>
+        <div style={{ color: color, fontFamily: font, fontSize: fontSize, textAlign: 'center', width: `${height-70}px`}}>
           {text}
         </div>
       </div>
