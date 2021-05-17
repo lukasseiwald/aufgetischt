@@ -19,60 +19,37 @@ class PlateSvg extends React.Component {
   }
 
   render() {
-    const { text } = this.props;
+    const { text, plate, color, font } = this.props;
     const { height } = this.state;
-    console.log(height);
-
-    const plates = [
-      SvgPlate1,
-      SvgPlate2,
-      SvgPlate3,
-    ];
-  
-    const colors = [
-      '#FF10F0',
-      '#00FF00',
-      '#FF6600'
-    ];
-  
-    const fonts = [
-      'EskapadeFraktur-RegularItalic',
-      'VampiroOne-Regular',
-      'FakirDisplay-Regular',
-      'Komu-A',
-    ]
-  
-    let plate = plates[Math.floor(Math.random() * plates.length)];
-    let color = colors[Math.floor(Math.random() * colors.length)];
-    let font = fonts[Math.floor(Math.random() * fonts.length)];
+    let selectedPlate;
+    
+    switch(plate) {
+      case 'plate1':
+        selectedPlate = SvgPlate1;
+        break;
+      case 'plate3':
+        selectedPlate = SvgPlate2;
+        break;
+      case 'plate3':
+        selectedPlate = SvgPlate3;
+        break;
+      default:
+        selectedPlate = SvgPlate1;
+        break;
+    }
 
     return (
       <div
          className={`plateBg ${(height > 300) ? "big-plate-height" : ""}`}
          ref={ (divElement) => { this.divElement = divElement } }
-         style={{ backgroundImage: `url(${plate})` }}
+         style={{ backgroundImage: `url(${selectedPlate})`, maxWidth: `${height}px`, textAlign: 'center' }}
       > 
-        <div style={{ color: color, fontFamily: font, fontSize: '0.6em' }}>
+        <div style={{ color: color, fontFamily: font, fontSize: '0.6em', textAlign: 'center',}}>
           {text}
         </div>
       </div>
     )
   }
 }
-
-// 
-// fontWeight="bold"
-//         fontFamily="monospace"
-//         fontSize={30}
-//         y="50%"
-//         x="50%"
-//         fillOpacity="null"
-//         strokeOpacity="null"
-//         strokeWidth={0}
-//         stroke="#000"
-//         textAnchor="middle"
-//         verticalAnchor="middle"
-//         scaleToFit={true}
-//         style={{ width: '200px', textWrap: '1em' }}
 
 export default PlateSvg

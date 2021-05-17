@@ -12,10 +12,48 @@ class Plate extends React.Component {
 
     this.state = {
       showDetail: false,
+      plate: 'plate1',
+      color: '#FF10F0',
+      font: 'Komu-A',
     };
 
     this.showDetailToggle = this.showDetailToggle.bind(this);
     this.nachschlag = this.nachschlag.bind(this);
+  }
+
+  componentDidMount() {
+    this.getPlateProps();
+  }
+
+  getPlateProps() {
+    const plates = [
+      'plate1',
+      'plate2',
+      'plate3',
+    ];
+  
+    const colors = [
+      '#FF10F0',
+      '#00FF00',
+      '#FF6600'
+    ];
+  
+    const fonts = [
+      'EskapadeFraktur-RegularItalic',
+      'VampiroOne-Regular',
+      'FakirDisplay-Regular',
+      'Komu-A',
+    ]
+  
+    const plate = plates[Math.floor(Math.random() * plates.length)];
+    const color = colors[Math.floor(Math.random() * colors.length)];
+    const font = fonts[Math.floor(Math.random() * fonts.length)];
+
+    this.setState({
+      plate,
+      color,
+      font
+    })
   }
 
   showDetailToggle(event) {
@@ -36,11 +74,8 @@ class Plate extends React.Component {
   }
 
   render() {
-    const { showDetail } = this.state;
+    const { showDetail, plate, color, font } = this.state;
     const { opinion } = this.props;
-
-    let colors = ['#4D4D4D', '#999999', '#FFFFFF', '#F44E3B', '#FE9200', '#FCDC00', '#DBDF00', '#A4DD00', '#68CCCA', '#73D8FF', '#AEA1FF', '#FDA1FF', '#333333', '#808080', '#cccccc', '#D33115', '#E27300', '#FCC400', '#B0BC00', '#68BC00', '#16A5A5', '#009CE0', '#7B64FF', '#FA28FF', '#000000', '#666666', '#B3B3B3', '#9F0500', '#C45100', '#FB9E00', '#808900', '#194D33', '#0C797D', '#0062B1', '#653294', '#AB149E'];
-    let color = colors[Math.floor(Math.random() * colors.length)];
 
     let thema = '';
     let gender = '';
@@ -95,7 +130,7 @@ class Plate extends React.Component {
         <button
           className='plate-clickable'
           onClick={this.showDetailToggle}>
-          <PlateSvg text={opinion.text} />
+          <PlateSvg text={opinion.text} plate={plate} color={color} font={font} />
         </button>
         <Modal 
            isOpen={showDetail}
@@ -117,7 +152,7 @@ class Plate extends React.Component {
               </Link>
             </div>
             <div className='plate-detail-2'>
-              <PlateSvg text={opinion.text} />
+              <PlateSvg text={opinion.text} plate={plate} color={color} font={font} />
             </div>
             <button
               onClick={this.showDetailToggle}
