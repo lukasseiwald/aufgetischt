@@ -159,8 +159,8 @@ class Gallery extends React.Component {
             {Object.keys(opinions).filter(opinion => (category !== 'all') ? (opinions[opinion].category === category) : (opinions !== null)).map((key, id) => 
               <div
                 key={key}
-                className='card float-left'
-                style={{ width: '18rem', marginRight: '1rem' }}
+                className={`card float-left ${(Math.floor(Math.random() * 3) === 2) ? "grid-expand" : ""}`}
+                style={{ width: '18rem', marginRight: '1rem'}}
               >
                 <div className='card-body'>
                   { opinions[key].preStored &&

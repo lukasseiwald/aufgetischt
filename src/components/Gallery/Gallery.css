@@ -70,17 +70,17 @@ input[type="radio"]:focus + label{
   min-height: 15em;
 }
 
-.card:nth(3) {
+.grid-expand {
   grid-row: span 2;
 }
-
+/* 
 .card:nth-of-type(2n + 2) {
   grid-row: span 2;
 }
 
 .card:nth-of-type(3n + 2) {
   grid-row: span 2;
-}
+} */
 
 /* .card:nth-child(6n + 1),
 .card:nth-child(6n + 2),

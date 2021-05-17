@@ -17,6 +17,9 @@
 } 
 
 .plateBg div {
+  width: 9em;
+  height: 9em;
+  font-size: 1em;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -24,3 +27,14 @@
   overflow: hidden;
   /* line-break: anywhere; */
 }
+
+.big-plate-height {
+  width: 9em;
+  height: 10em;
+} 
+
+.big-plate-height div {
+  font-size: 1em !important;
+  width: 15em !important;
+  height: 10em !important;
+} 
