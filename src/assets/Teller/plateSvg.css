@@ -16,6 +16,11 @@
   border-radius: 20em;
 } 
 
-.plateBg p {
-  width: min-content;
+.plateBg div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20em;
+  overflow: hidden;
+  /* line-break: anywhere; */
 }

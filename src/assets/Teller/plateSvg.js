@@ -4,42 +4,60 @@ import SvgPlate1 from './teller_1.svg';
 import SvgPlate2 from './teller_2.svg'; 
 import SvgPlate3 from './teller_3.svg'; 
 
-function PlateSvg(props) {
-  const { text } = props;
+class PlateSvg extends React.Component {
+  constructor(props) {
+    super(props);
 
-  const plates = [
-    SvgPlate1,
-    SvgPlate2,
-    SvgPlate3,
-  ];
+    this.state = {
+      height: 0,
+    };
+  }
 
-  const colors = [
-    '#FF10F0',
-    '#00FF00',
-    '#FF6600'
-  ];
+  componentDidMount() {
+    const height = this.divElement.clientHeight;
+    this.setState({ height });
+  }
 
-  const fonts = [
-    'EskapadeFraktur-RegularItalic',
-    'VampiroOne-Regular',
-    'FakirDisplay-Regular',
-    'Komu-A',
-  ]
+  render() {
+    const { text } = this.props;
+    const { height } = this.state;
+    console.log(height);
 
-  let plate = plates[Math.floor(Math.random() * plates.length)];
-  let color = colors[Math.floor(Math.random() * colors.length)];
-  let font = fonts[Math.floor(Math.random() * fonts.length)];
+    const plates = [
+      SvgPlate1,
+      SvgPlate2,
+      SvgPlate3,
+    ];
   
-  return (
-    <div
-       className='plateBg'
-       style={{ backgroundImage: `url(${plate})` }}
-    > 
-      <p style={{ color: color, fontFamily: font, fontSize: 'smaller' }}>
-        {text}
-      </p>
-    </div>
-  )
+    const colors = [
+      '#FF10F0',
+      '#00FF00',
+      '#FF6600'
+    ];
+  
+    const fonts = [
+      'EskapadeFraktur-RegularItalic',
+      'VampiroOne-Regular',
+      'FakirDisplay-Regular',
+      'Komu-A',
+    ]
+  
+    let plate = plates[Math.floor(Math.random() * plates.length)];
+    let color = colors[Math.floor(Math.random() * colors.length)];
+    let font = fonts[Math.floor(Math.random() * fonts.length)];
+
+    return (
+      <div
+         className='plateBg'
+         ref={ (divElement) => { this.divElement = divElement } }
+         style={{ backgroundImage: `url(${plate})` }}
+      > 
+        <div style={{ color: color, fontFamily: font, width: `${height/(1.2)}px`, fontSize: (height > 260) ? '0.9em' : '0.5em', height: `${height-50}px`, borderRadius: '20em', }}>
+          {text}
+        </div>
+      </div>
+    )
+  }
 }
 
 // 

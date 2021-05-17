@@ -108,7 +108,12 @@
 
 .plate-detail-2 {
   width: 50%;
+  height: inherit;
   align-self: center;
+  padding: 0 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .card-text {
