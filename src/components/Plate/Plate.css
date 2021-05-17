@@ -171,7 +171,7 @@
 
   .plate-detail-1 {
     width: 100%;
-    height: 50%;
+    height: 60%;
     border-top: 1px solid #ccc;
     border-right: none;
     padding: 0;
@@ -179,7 +179,7 @@
 
   .plate-detail-1 p {
     width: 100%;
-    font-size: 0.4em;
+    font-size: 0.35em;
   }
 
   .plate-detail-2 {

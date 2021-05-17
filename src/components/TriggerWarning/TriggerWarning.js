@@ -58,7 +58,7 @@ class TriggerWarning extends React.Component {
             Warnung vor möglicher rassistischer Hassrede, verbaler sexualisierter Gewalt gegenüber Frauen und Männern. Sowie diverse Ansichten zu den Themen Umwelt und mentaler Gesundheit.
           </p>
           <p className='triggerText'>
-            Außderdem verwendet diese Website Cookies, um Ihre Interaktion mit der Website zu verwalten. 
+            aufgetischt: verwendet Cookies um die Interaktion mit der Website zu verwalten. 
           </p>
         </div>
       </CookieConsent>

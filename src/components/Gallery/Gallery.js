@@ -120,14 +120,6 @@ class Gallery extends React.Component {
             <input
               type='radio'
               name='category-gallery'
-              value='rassismus'
-              id='radio-category-gallery-1'
-              className='radioButton category-radio'
-            />
-            <label htmlFor='radio-category-gallery-1'>RASSISMUS</label>
-            <input
-              type='radio'
-              name='category-gallery'
               value='umwelt'
               id='radio-category-gallery-2'
               className='radioButton category-radio'
@@ -141,6 +133,14 @@ class Gallery extends React.Component {
               className='radioButton category-radio'
             />
             <label htmlFor='radio-category-gallery-3'>FEMINISMUS</label>
+            <input
+              type='radio'
+              name='category-gallery'
+              value='rassismus'
+              id='radio-category-gallery-1'
+              className='radioButton category-radio'
+            />
+            <label htmlFor='radio-category-gallery-1'>RASSISMUS</label>
             <input
               type='radio'
               name='category-gallery'

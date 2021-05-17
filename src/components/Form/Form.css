@@ -72,6 +72,9 @@ form {
   flex: 1 0 auto !important;
   width: max-content !important;
   text-align: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
 }
 
 textarea {
@@ -233,6 +236,11 @@ input[type="number"]:placeholder-shown {
 }
 
 @media only screen and (max-width: 720px) {
+  .container {
+    margin-bottom: 6em;
+    width: 85%;
+  }
+
   textarea {
     height: 6em;
     width: 100%;
@@ -253,7 +261,7 @@ input[type="number"]:placeholder-shown {
 
   .form-categories {
     padding-top: 0em;
-    font-size: 0.7em !important;
+    font-size: 0.5em !important;
   }
 
   .form-categories input[type="radio"] + label {

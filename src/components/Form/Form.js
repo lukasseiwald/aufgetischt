@@ -68,14 +68,6 @@ class Form extends React.Component {
                     <input
                       type='radio'
                       name='category'
-                      value='rassismus'
-                      id='radio-category-1'
-                      className='radioButton category-radio'
-                    />
-                    <label htmlFor='radio-category-1'>RASSISMUS</label>
-                    <input
-                      type='radio'
-                      name='category'
                       value='umwelt'
                       id='radio-category-2'
                       className='radioButton category-radio'
@@ -89,6 +81,14 @@ class Form extends React.Component {
                       className='radioButton category-radio'
                     />
                     <label htmlFor='radio-category-3'>FEMINISMUS</label>
+                    <input
+                      type='radio'
+                      name='category'
+                      value='rassismus'
+                      id='radio-category-1'
+                      className='radioButton category-radio'
+                    />
+                    <label htmlFor='radio-category-1'>RASSISMUS</label>
                     <input
                       type='radio'
                       name='category'
