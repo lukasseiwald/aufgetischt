@@ -46,12 +46,57 @@ input[type="radio"]:focus + label{
 }
 
 .gallery-wall {
-  display: grid;
+  /* display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   grid-gap: 4em 3em;
-  grid-auto-flow: row dense;
+  grid-auto-flow: row dense; */
   width: 100%;
+  /* display: flex;
+	flex-wrap: wrap; */
+	display: grid;
+	grid-gap: 3em;
+	grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+	grid-auto-rows: minmax(20vh, 200px);
 }
+
+.card {
+  /* flex: 0 0 auto;
+		flex-wrap: wrap;
+		height: 20vh;
+		margin: .12rem;
+		width: 20rem;
+		min-width: 15rem; */
+    /* background-color: blue; */
+    /* flex: 0 0 auto; */
+    flex-wrap: wrap;
+    /* height: 20vh; */
+    margin: .12rem;
+    /* width: 20rem; */
+    display: flex;
+    width: 100% !important;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    background-color: blue;
+}
+
+/* .card:nth-of-type(2n + 2) {
+  grid-row: span 2;
+} */
+
+.card:nth-child(6n + 1),
+.card:nth-child(6n + 2),
+.card:nth-child(6n + 6) {
+	grid-row: span 2;
+}
+
+.card-body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} 
 
 .large-plate {
   background: rgba(255, 0, 0, 0.25);
