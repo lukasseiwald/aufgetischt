@@ -48,7 +48,6 @@
 .link-to-instagram {
   height: 3em;
   display: flex;
-  margin-left: 0.5em;
 }
 
 .social-row {
@@ -208,6 +207,9 @@ a {
 
 
 @media only screen and (max-width: 800px) {
+  .footer-container {
+    margin-top: 2em;
+  }
   .footer {
     width: 100%;
   }

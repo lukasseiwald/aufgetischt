@@ -54,14 +54,14 @@ class Footer extends React.Component {
               <div
                 className='social-links'
               >
-                <Mailto email='info@aufgetischt.link' subject='Aufgetischtes' body=''>
+                <Mailto email='info@aufgetischt.link' subject='aufgetischt:' body=''>
                   <div className='social'>
                     <p>
                         info@aufgetischt.link
                     </p>
                   </div>
                 </Mailto>
-                <a href='https://www.instagram.com/aufgetischt.link/' target='_blank' rel='noreferrer'>
+                <a href='https://www.instagram.com/hierwirdaufgetischt/' target='_blank' rel='noreferrer'>
                   <div className='social'>
                     <p>@hierwirdaufgetischt</p>
                   </div>

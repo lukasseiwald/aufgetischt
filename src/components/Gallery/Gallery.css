@@ -120,6 +120,7 @@ input[type="radio"]:focus + label{
   justify-content: center;
   align-items: center;
   margin-top: 13em;
+  flex-direction: row;
 }
 
 .beilage-container svg {
@@ -131,17 +132,26 @@ input[type="radio"]:focus + label{
 .beilage-container p {
   width: 45%;
   max-width: 28em;
+  font-family: 'Acumin-Extra-Light';
+  align-self: flex-end;
+  margin-top: 5em;
 }
 
 /* @media only screen and (max-width: 900px) {
   .gallery-wall {
     grid-template-columns: 40% 40%;
   }
-}
+}*/
 
 @media only screen and (max-width: 650px) {
-  .gallery-wall {
-    grid-template-columns: 100%;
+  .beilage-container {
+    flex-direction: column;
+    margin-top: 8em;
   }
 
-} */
+  .beilage-container p {
+    align-self: center;
+    width: 90%;
+    margin-top: 2em;
+  }
+} 
