@@ -11,9 +11,11 @@ class Form extends React.Component {
 
     this.state = {
       activeAgeInput: false,
+      zeichen: 40
     };
     this.onChangeGender = this.onChangeGender.bind(this);
     this.onChangeCategory = this.onChangeCategory.bind(this);
+    this.wordCount = this.wordCount.bind(this);
     this.titleRef = React.createRef();
   }
 
@@ -50,8 +52,14 @@ class Form extends React.Component {
     this.refs.category.value = event.target.value
   }
 
+  wordCount() {
+    this.setState({
+      zeichen: 40 - this.refs.text.value.length,
+    })
+  }
+
   render() {
-    const { activeAgeInput } = this.state;
+    const { activeAgeInput, zeichen } = this.state;
 
     return (
       <React.Fragment>
@@ -109,6 +117,7 @@ class Form extends React.Component {
                       maxLength='40'
                       className='form-control'
                       required
+                      onChange={this.wordCount}
                       placeholder='Red nicht lange um den heißen Brei.                                                    
                       Bring deine Meinung in 40 Zeichen auf den Punkt.'
                     />
@@ -169,6 +178,13 @@ class Form extends React.Component {
                         min='16'
                         max='99'
                       />
+                    </div>
+                    <div
+                      className='col-md-6 zeichen-anzeige'
+                    >
+                      <label>
+                        {zeichen} Zeichen
+                      </label>
                     </div>
                   </div>
                   <button type='submit' className='btn btn-primary button-submit form-group'>
