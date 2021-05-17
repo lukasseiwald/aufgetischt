@@ -2,6 +2,7 @@ import React from 'react';
 import Modal from 'react-modal';
 import './Plate.css';
 import PlateSvg from '../../assets/Teller/plateSvg';
+import AufgetischtLogo from '../../assets/aufgetischt_logo.js';
 import {
   Link,
 } from 'react-router-dom';
@@ -70,7 +71,6 @@ class Plate extends React.Component {
     setTimeout(function(){ 
       window.scrollTo({top: 0, behavior: 'smooth'});
     }, 100);
-
   }
 
   render() {
@@ -138,7 +138,7 @@ class Plate extends React.Component {
         >
           <div className='plate-detail'>
             <div className='plate-detail-1'>
-              <h2>aufgetischt:</h2>
+              <AufgetischtLogo className='aufgetischt-logo-detail' />
               <div className='plate-detail-1-body'>
                 <p className='card-text'>{thema}</p>
                 <p className='card-text'>von {gender}{age}.</p>

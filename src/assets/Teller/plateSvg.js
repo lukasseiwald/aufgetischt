@@ -10,17 +10,25 @@ class PlateSvg extends React.Component {
 
     this.state = {
       height: 0,
+      width: 0,
+      fontSize: '0.7em',
     };
   }
 
   componentDidMount() {
     const height = this.divElement.clientHeight;
-    this.setState({ height });
+
+    const fontSize = this.divElement.parentNode.parentNode.parentNode.parentNode.className.includes('mini') ? '0.6em' : '1em';
+    this.setState({
+      height,
+      width: `${height-20}px`,
+      fontSize: fontSize,
+    });
   }
 
   render() {
     const { text, plate, color, font } = this.props;
-    const { height } = this.state;
+    const { height, width, fontSize } = this.state;
     let selectedPlate;
     
     switch(plate) {
@@ -38,15 +46,16 @@ class PlateSvg extends React.Component {
         break;
     }
 
-    const fontSize = (height > 300) ? '1em' : '0.6em';
+    // console.log(isExpanded)
+    // console.log(text)
 
     return (
       <div
          className='plateBg'
          ref={ (divElement) => { this.divElement = divElement } }
-         style={{ backgroundImage: `url(${selectedPlate})`, textAlign: 'center' }}
+         style={{ backgroundImage: `url(${selectedPlate})`, textAlign: 'center', maxWidth: '100%' }}
       > 
-        <div style={{ color: color, fontFamily: font, fontSize: fontSize, textAlign: 'center', width: `${height-70}px`}}>
+        <div style={{ color: color, fontFamily: font, fontSize: fontSize, textAlign: 'center', width: width}}>
           {text}
         </div>
       </div>
