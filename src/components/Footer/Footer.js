@@ -22,7 +22,27 @@ class Footer extends React.Component {
   constructor(props) {
     super(props);
 
+    this.state = {
+      opacity: 0,
+    };
+
     this.scrollToTop = this.scrollToTop.bind(this);
+  }
+
+  componentDidMount() {
+    if (typeof window !== 'undefined') {
+      window.onscroll = () => {
+        let currentScrollPos = window.pageYOffset;
+        let maxScroll = document.body.scrollHeight - window.innerHeight + 400;
+        // console.log(maxScroll)
+        if (currentScrollPos > 750 && currentScrollPos < maxScroll) {
+          this.setState({ opacity: 1 })
+          // console.log(currentScrollPos)
+        } else {
+          this.setState({ opacity: 0 })
+        }
+      }
+    }
   }
 
   scrollToTop(e) {
@@ -31,6 +51,8 @@ class Footer extends React.Component {
   }
 
   render() {
+    const { opacity } = this.state;
+  
     return (
       <div
         className='footer-container'
@@ -90,27 +112,6 @@ class Footer extends React.Component {
           </div>
           <div className='flex-row-item small-row-2'>
             <Link
-              to='/'
-              className='footer-link'
-              onClick={this.scrollToTop}
-            > 
-              { !isMobile && 
-                <img
-                  className='arrowUp'
-                  src={arrowUp}
-                />
-              }
-              { isMobile && 
-                <img
-                  className='arrowUpSmall'
-                  src={arrowUpKlein}
-                />
-              }
-              <p>wieder nach oben</p>
-            </Link>
-          </div>
-          <div className='flex-row-item small-row-2'>
-            <Link
               to='/impressum'
               className='footer-link'
             >
@@ -122,6 +123,28 @@ class Footer extends React.Component {
               id='data-link'
             >
               <p>Datenschutz</p>
+            </Link>
+          </div>
+          <div className='flex-row-item small-row-2'>
+            <Link
+              to='/'
+              className='footer-link'
+              onClick={this.scrollToTop}
+            > 
+              { !isMobile && 
+                <img
+                  className='arrowUp'
+                  style={{ opacity: `${opacity}`}}
+                  src={arrowUpKlein}
+                />
+              }
+              { isMobile && 
+                <img
+                  className='arrowUpSmall'
+                  src={arrowUpKlein}
+                />
+              }
+              <p>wieder nach oben</p>
             </Link>
           </div>
         </div>

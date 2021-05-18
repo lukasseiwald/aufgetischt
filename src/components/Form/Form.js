@@ -4,6 +4,7 @@ import { isMobile } from 'react-device-detect';
 import './Form.css';
 import AufgetischtLogo from '../../assets/aufgetischt_logo.js'
 import OpenAboutButton from '../OpenAboutButton/OpenAboutButton';
+// import plateSvg from '../../assets/Teller/teller_1.svg';
 
 class Form extends React.Component {
   constructor(props) {

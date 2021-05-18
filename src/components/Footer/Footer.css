@@ -208,7 +208,14 @@ a {
 
 .arrowUp {
   width: 3em;
-  transform: translate(0em, -30px);
+  position: fixed;
+  bottom: 1em;
+  right: 1em;
+  transition: 0.4s transform;
+}
+
+.arrowUp:hover {
+  transform: translateY(-5px);
 }
 
 .arrowUpSmall {
@@ -251,9 +258,6 @@ a {
     height: fit-content !important;
     min-height: 120px;
     width: 100% !important;
-  }
-  .arrowUp {
-    transform: translate(0em, -8px);
   }
   .small-row {
     height: fit-content;

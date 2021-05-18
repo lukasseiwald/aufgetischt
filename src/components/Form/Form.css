@@ -103,7 +103,6 @@ input[type="radio"] {
   display: none;
 }
 
-
 input[type="radio"] + label {
   margin: 5px;
   border-radius: 40px;
