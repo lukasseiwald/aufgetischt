@@ -3,12 +3,12 @@ import './Footer.css';
 import {
   Link,
 } from 'react-router-dom';
+import { isMobile } from 'react-device-detect';
 import fhSalzburgLogo from '../../assets/fh_salzburg.png';
 import arrowUp from '../../assets/aufgetischt_Pfeil.png';
+import arrowUpKlein from '../../assets/aufegtischt_Pfeil_klein.png';
 import StudioStoerungLogo from '../../assets/StudioStoerungLogo';
 import AufgetischtLogo from '../../assets/aufgetischt_logo.js';
-
-
 
 const Mailto = ({ email, subject = '', body = '', children }) => {
   let params = subject || body ? '?' : '';
@@ -94,10 +94,18 @@ class Footer extends React.Component {
               className='footer-link'
               onClick={this.scrollToTop}
             > 
-              <img
-                className='arrowUp'
-                src={arrowUp}
-              />
+              { !isMobile && 
+                <img
+                  className='arrowUp'
+                  src={arrowUp}
+                />
+              }
+              { isMobile && 
+                <img
+                  className='arrowUpSmall'
+                  src={arrowUpKlein}
+                />
+              }
               <p>wieder nach oben</p>
             </Link>
           </div>

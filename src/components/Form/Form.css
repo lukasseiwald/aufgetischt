@@ -356,7 +356,7 @@ input[type="number"]:placeholder-shown {
 
 @media only screen and (max-width: 620px) {
   .container {
-    width: 80%;
+    width: 88%;
   }
   .form-categories input[type="radio"] + label {
     font-size: 1.4em;

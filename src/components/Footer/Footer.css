@@ -50,6 +50,10 @@
   display: flex;
 }
 
+.link-to-instagram svg {
+  padding-top: 0.2em;
+}
+
 .social-row {
   display: flex;
   flex-direction: row;
@@ -205,6 +209,10 @@ a {
   transform: translate(0em, -30px);
 }
 
+.arrowUpSmall {
+  width: 3em;
+}
+
 @media only screen and (min-width: 801px) and (max-width: 1019px) {
   #copyright-section {
     width: 100%;
@@ -242,8 +250,12 @@ a {
     min-height: 120px;
     width: 100% !important;
   }
+  .arrowUp {
+    transform: translate(0em, -8px);
+  }
   .small-row {
     height: fit-content;
+    margin-bottom: 0;
   }
   .small-row-2 {
     justify-content: flex-start;
@@ -268,6 +280,13 @@ a {
   }
   .fhSalzburg {
     padding-top: 2em;
+  }
+  #copyright-section {
+    flex-direction: column;
+    justify-content: center;
+  }
+  #copyright-section p {
+    margin-bottom: 0;
   }
   #copyright-section .row-flex {
     padding-right: 1em;
