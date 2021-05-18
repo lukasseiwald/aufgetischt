@@ -2,9 +2,9 @@
 
 
 .triggerImage {
-  width: 18em;
-  height: 30%;
-  transform: rotateZ(10deg);
+  width: 15%;
+  transform: rotateZ(5deg);
+  margin-bottom: 2em;
 }
 
 .triggerTextContainer {
@@ -16,14 +16,20 @@
 } 
 
 .triggerText {
-  font-family: 'Acumin-Extra-Light';
+  font-family: 'acumin-pro';
+  font-weight: 300;
+  font-style: normal;
   font-size: 2em;
   color: #666;
   width: 70%;
-  max-width: 30em;
+  max-width: 32em;
   text-align: center;
   align-self: center;
   letter-spacing: -0.05em;
+}
+
+#cookieWarning {
+  font-size: 1.7em;
 }
 
 .CookieConsent {
@@ -35,6 +41,12 @@
 .CookieConsent button {
   margin: 0 !important;
   margin-bottom: 3em !important;
+  font-family: 'acumin-pro';
+  font-weight: 300 !important;
+  font-style: normal;
+  transform: translateY(-60px);
+  border: 1px solid #000 !important;
+  padding: 0.7em 3em !important;
 }
 
 .CookieConsent button:hover {
@@ -43,32 +55,39 @@
 }
 
 @media only screen and (max-width: 700px) {
-  .triggerImage {
-    width: 13em;
-    height: 30%;
-  }
-
   .triggerText {
     font-size: 1.5em;
+  }
+
+  #cookieWarning {
+    font-size: 1.3em;
   }
 }
 
 
 @media only screen and (max-height: 970px) {
   .triggerImage {
-    width: 10em;
-    height: 30%;
+    width: 16%;
   }
 
   .triggerText {
     font-size: 1.3em;
   }
+
+  #cookieWarning {
+    font-size: 1.1em;
+  }
+}
+
+@media only screen and (max-width: 810px) {
+  .triggerImage {
+    width: 30%;
+  }
 }
 
 @media only screen and (max-width: 510px) {
   .triggerImage {
-    width: 10em;
-    height: 30%;
+    width: 40%;
   }
 
   .triggerText {

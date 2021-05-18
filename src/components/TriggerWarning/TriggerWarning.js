@@ -45,7 +45,7 @@ class TriggerWarning extends React.Component {
           alignItems: 'center',
           flexDirection: 'column',
         }}
-        buttonText='Ok, verstanden!'
+        buttonText='OK, VERSTANDEN!'
       >
         <img
           className='triggerImage'
@@ -55,9 +55,9 @@ class TriggerWarning extends React.Component {
           className='triggerTextContainer'
         >
           <p className='triggerText'>
-            Warnung vor möglicher rassistischer Hassrede, verbaler sexualisierter Gewalt gegenüber Frauen und Männern. Sowie diverse Ansichten zu den Themen Umwelt und mentaler Gesundheit.
+            Warnung vor möglicher rassistischer Hassrede, verbaler sexualisierter Gewalt gegenüber Frauen und Männern. Sowie diverse Ansichten zu den Themen Umwelt und mentaler Gesundheit. 
           </p>
-          <p className='triggerText'>
+          <p id='cookieWarning' className='triggerText'>
             aufgetischt: verwendet Cookies um die Interaktion mit der Website zu verwalten. 
           </p>
         </div>
