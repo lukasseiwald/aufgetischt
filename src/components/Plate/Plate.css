@@ -151,6 +151,17 @@
   font-weight: 100;
 }
 
+@media only screen and (max-height: 700px) {
+  .plate-detail-1 p:nth-child(2) {
+    font-size: 0.35em !important;
+    margin-bottom: 3em;
+  }
+  .nachschlag p {
+    font-size: 0.8em !important;
+    margin-bottom: 0;
+  }
+}
+
 @media only screen and (min-width: 2000px) {
   .ReactModal__Content {
     inset: 10% 15% !important;
