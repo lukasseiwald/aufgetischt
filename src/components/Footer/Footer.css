@@ -124,7 +124,7 @@ a {
 }
 
 .big-row {
-  height: 240px !important;
+  height: 200px !important;
   align-items: center;
   justify-content: flex-start;
 }
@@ -155,10 +155,16 @@ a {
 #copyright-section {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
 
 #copyright-section p {
   font-size: 1em;
+  padding-left: 1.8em;
+}
+
+#copyright-section .row-flex {
+  padding-right: 2em;
 }
 
 /* .column-content p {
@@ -199,19 +205,26 @@ a {
   transform: translate(0em, -30px);
 }
 
-@media only screen and (max-width: 1019px) {
+@media only screen and (min-width: 801px) and (max-width: 1019px) {
   #copyright-section {
-    height: 240px !important;
+    width: 100%;
+    height: 80px;
+    flex: auto;
   }
 }
 
 
 @media only screen and (max-width: 800px) {
   .footer-container {
-    margin-top: 2em;
+    margin-top: 6em;
   }
   .footer {
     width: 100%;
+  }
+  .footer-logo {
+    width: 13em;
+    padding-left: 2em;
+    padding-top: 2em;
   }
   .footer-right {
     flex-direction: column;
@@ -224,9 +237,39 @@ a {
     border-left: none;
   }
   .big-row {
-    height: 170px !important;
+    /* height: 170px !important; */
+    height: fit-content !important;
+    min-height: 120px;
+    width: 100% !important;
   }
-  #copyright-section {
-    height: 170px !important;
+  .small-row {
+    height: fit-content;
+  }
+  .small-row-2 {
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .small-row-2 a {
+    font-size: 0.8em !important;
+    padding-left: 2.4em;
+  }
+  #data-link {
+    padding-left: 2em;
+  }
+  .flex-row-container > .flex-row-item {
+    flex: 1 1 100%;
+  }
+  .flex-row-container > .flex-row-item p {
+    padding-left: 1.4em;
+    font-size: 1.3em;
+  }
+  .footer-description {
+    margin-bottom: 2em;
+  }
+  .fhSalzburg {
+    padding-top: 2em;
+  }
+  #copyright-section .row-flex {
+    padding-right: 1em;
   }
 }

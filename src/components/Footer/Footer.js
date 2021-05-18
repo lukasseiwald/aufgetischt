@@ -88,7 +88,7 @@ class Footer extends React.Component {
               </a>
             </div>
           </div>
-          <div className='flex-row-item'>
+          <div className='flex-row-item small-row-2'>
             <Link
               to='/'
               className='footer-link'
@@ -101,7 +101,7 @@ class Footer extends React.Component {
               <p>wieder nach oben</p>
             </Link>
           </div>
-          <div className='flex-row-item'>
+          <div className='flex-row-item small-row-2'>
             <Link
               to='/impressum'
               className='footer-link'
