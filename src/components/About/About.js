@@ -4,7 +4,8 @@ import {
   Link,
 } from 'react-router-dom';
 import AufgetischtLogo from '../../assets/aufgetischt_logo.js';
-import foodImg from '../../assets/about/food.jpg';
+import image01 from '../../assets/about/aufgetischt_about_01.gif';
+import image02 from '../../assets/about/aufgetischt_about_02.png';
 import SaltPepperSvg from '../../assets/about/salz_pfeffer';
 class About extends React.Component {
 
@@ -12,33 +13,37 @@ class About extends React.Component {
     return (
       <React.Fragment>
         <div className='about-container'>
-          <Link
-            className='openFormButton'
-            to={{pathname: '/'}}>
-            <p className='aboutButtonTextMobile'>
-              → Tisch uns Deine Meinung auf:
-            </p>
-          </Link>
+          <div className='link-container'>
+            <Link
+              className='about-openFormButton'
+              to={{pathname: '/'}}>
+              <p className='aboutButtonTextMobile'>
+                → Tisch uns Deine Meinung auf:
+              </p>
+            </Link>
+          </div>
           <div className='about-content'>
             <AufgetischtLogo />
             <div className='text-image-container'>
               <p className='about-description'>
                 Ist ein visuelles Werkzeug zur Darstellung aktueller Meinungsbilder am Tisch. 
               </p>
-              <img src={foodImg} className='aboutImg' />
+              <img src={image01} className='aboutImg' />
             </div>
             <div className='text-image-container'>
-              <img src={foodImg} className='aboutImg' />
+              <img src={image02} className='aboutImg' />
               <p className='about-description description-2'>
                 Anonym und niederschwellig werden verschiedene Meinungen abseits des Tischgesprächs abgebildet und eine Reaktion darauf abgefragt. 
               </p>
             </div>
             <div className='text-image-container'>
               <div className='about-sidenote-container'>
-                <AufgetischtLogo />
-                <p className='about-description-small'>
-                  war zu Beginn als ein Upcyclingprojekt angedacht und hat sich zu einer Kampagne mit einem Werkzeug für die visualisierung vielfältiger Meinungen am Tisch entwickelt.
-                </p>
+                <div className='about-sidenote-content'>
+                  <AufgetischtLogo />
+                  <p className='about-description-small'>
+                    war zu Beginn als ein Upcyclingprojekt angedacht und hat sich zu einer Kampagne mit einem Werkzeug für die visualisierung vielfältiger Meinungen am Tisch entwickelt.
+                  </p>
+                </div>
               </div>
               <p className='about-description description-2'>
                 Es soll gezeigt werden das verschiedene Positionen am Tisch sitzen. Ziel ist es den inneren Monolog eine neue Richtung zu geben.
