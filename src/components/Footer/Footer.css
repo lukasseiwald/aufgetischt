@@ -3,7 +3,9 @@
   margin-top: 13em;
   display: flex;
   color: #333;
-  font-family: 'Acumin-Extra-Light';
+  font-family: 'acumin-pro';
+  font-weight: 300;
+  font-style: normal;
 }
 
 .footer-container .flex-row-container{

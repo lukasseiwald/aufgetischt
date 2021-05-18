@@ -153,17 +153,17 @@ class Plate extends React.Component {
             </div>
             <div className='plate-detail-2'>
               <PlateSvg text={opinion.text} plate={plate} color={color} font={font} />
-            </div>
-            <button
-              onClick={this.showDetailToggle}
-              className='closeModalButton'
-            >
-              <h3
-                className='closeIcon' 
+              <button
+                onClick={this.showDetailToggle}
+                className='closeModalButton'
               >
-                ✕
-              </h3>
-            </button>
+                <h3
+                  className='closeIcon' 
+                >
+                  ✕
+                </h3>
+              </button>
+            </div>
           </div>
         </Modal>
         {/* {showDetail && 
