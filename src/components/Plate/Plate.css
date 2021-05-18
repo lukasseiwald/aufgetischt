@@ -172,7 +172,7 @@
 
   .aufgetischt-logo-detail {
     width: 50%;
-    margin-top: 2em;
+    margin-top: 0.5em;
   }
 
   .plate-detail-1-body {
@@ -204,6 +204,7 @@
 
   .nachschlag {
     margin-right: 0;
+    bottom: 0em;
   }
 
   .nachschlag p {
