@@ -27,7 +27,7 @@ class About extends React.Component {
             <AufgetischtLogo />
             <div className='text-image-container'>
               <p className='about-description'>
-                Ist ein visuelles Werkzeug zur Darstellung aktueller Meinungsbilder am Tisch. 
+                Ist eine Intervention und ein Werkzeug zur Darstellung aktueller Meinungsbilder am Tisch.
               </p>
               <div className='aboutImg-container'>
                 <img src={image01} className='aboutImg' />

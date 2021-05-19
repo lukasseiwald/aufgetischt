@@ -130,13 +130,19 @@ input[type="radio"]:focus + label{
 }
 
 .beilage-container p {
-  width: 45%;
+  width: 50%;
   max-width: 28em;
   font-family: 'acumin-pro';
   font-weight: 300;
   font-style: normal;
-  align-self: flex-end;
-  margin-top: 5em;
+  align-self: center;
+  margin-top: 4em;
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 70em;
 }
 
 /* @media only screen and (max-width: 900px) {

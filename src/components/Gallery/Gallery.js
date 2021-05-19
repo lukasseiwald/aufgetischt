@@ -108,7 +108,7 @@ class Gallery extends React.Component {
         <div className='gallery'>
           <AufgetischtLogo />
           <div className='col-md-6 form-categories gallery-categories' ref='category-gallery' onChange={this.onChangeCategoryGallery}>
-          <input
+            <input
               type='radio'
               name='category-gallery'
               value='all'
@@ -151,7 +151,7 @@ class Gallery extends React.Component {
             <label htmlFor='radio-category-gallery-4'>MENTALE GESUNDHEIT</label>
           </div>
           {loading  &&
-            <div>
+            <div className='loading-container'>
               <h1>lädt ...</h1>
             </div>
           }
