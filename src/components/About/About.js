@@ -3,6 +3,7 @@ import './About.css';
 import {
   Link,
 } from 'react-router-dom';
+import { isMobile } from 'react-device-detect';
 import AufgetischtLogo from '../../assets/aufgetischt_logo.js';
 import image01 from '../../assets/about/aufgetischt_about_01.gif';
 import image02 from '../../assets/about/aufgetischt_about_02.png';
@@ -28,10 +29,14 @@ class About extends React.Component {
               <p className='about-description'>
                 Ist ein visuelles Werkzeug zur Darstellung aktueller Meinungsbilder am Tisch. 
               </p>
-              <img src={image01} className='aboutImg' />
+              <div className='aboutImg-container'>
+                <img src={image01} className='aboutImg' />
+              </div>
             </div>
             <div className='text-image-container'>
-              <img src={image02} className='aboutImg' />
+              <div className='aboutImg-container'>
+                <img src={image02} className='aboutImg aboutImg-2' />
+              </div>
               <p className='about-description description-2'>
                 Anonym und niederschwellig werden verschiedene Meinungen abseits des Tischgesprächs abgebildet und eine Reaktion darauf abgefragt. 
               </p>
@@ -51,9 +56,20 @@ class About extends React.Component {
             </div>
             <div className='text-image-container'>
               <div className='about-filler' />
-              <p className='about-description description-2'>
+              <p className='about-description description-2 description-3'>
                 Wir wollen beobachten welche Grauzonen dabei entstehen. Gibt es mehr als Schwarz und Weiss?
               </p>
+            </div>
+            <div className='aboutImg-container aboutImg-container-2'>
+              <img src={image02} className='aboutImg aboutImg-3' />
+            </div>
+            <div className='about-sidenote-container-2'>
+              <div className='about-sidenote-content'>
+                <AufgetischtLogo />
+                <p className='about-description-small'>
+                  war zu Beginn als ein Upcyclingprojekt angedacht und hat sich zu einer Kampagne mit einem Werkzeug für die visualisierung vielfältiger Meinungen am Tisch entwickelt.
+                </p>
+              </div>
             </div>
             <div className='text-image-container'>
               <div className='about-filler' />

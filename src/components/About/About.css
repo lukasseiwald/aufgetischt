@@ -17,7 +17,7 @@
 
 .about-description {
   font-size: 5em;
-  /* margin-right: 0.7em; */
+  width: 60%;
   font-family: 'acumin-pro';
   font-weight: 200;
   font-style: normal;
@@ -81,8 +81,12 @@
   justify-content: space-between;
 }
 
-.aboutImg {
+.aboutImg-container {
   width: 35%;
+}
+
+.aboutImg {
+  width: 100%;
 }
 
 .about-categories {
@@ -98,7 +102,6 @@
 .full-length-description {
   width: 100%;
   font-size: 3.5em;
-  line-height: 1.2em;
   font-family: 'acumin-pro';
   font-weight: 200;
   font-style: normal;
@@ -122,6 +125,13 @@
   width: 40%;
 }
 
+.aboutImg-3 {
+  display: none;
+}
+.about-sidenote-container-2 {
+  display: none;
+}
+
 /* @media screen and (min-width: 1400px) {
   .about-description-small {
     width: 35%;
@@ -129,51 +139,158 @@
   }
 } */
 
-@media only screen and (max-width: 700px) {
-  .about-container {
-    font-family: 'acumin-pro';
-    width: 100%;
-    max-width: 80em;
-    padding: 2em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+@media only screen and (max-width: 1500px) {
+  .about-description {
+    font-size: 4em;
   }
+  .description-2 {
+    font-size: 3em;
+  } 
+}
+
+@media only screen and (max-width: 1200px) {
+  .about-description {
+    font-size: 3.5em;
+    margin-right: 0.5em;
+  }
+  .description-2 {
+    margin-left: 0.5em;
+    font-size: 2.5em;
+  } 
+}
+
+@media only screen and (max-width: 1200px) {
+  .about-content svg {
+    width: 45%;
+  }
+  .about-description {
+    font-size: 3em;
+    margin-right: 0.5em;
+  }
+  .description-2 {
+    margin-left: 1.5em;
+    font-size: 2.5em;
+  } 
+  .about-sidenote-container {
+    width: 35%;
+  }
+  .about-sidenote-content {
+    width: auto;
+  }
+  .about-filler {
+    width: 0%;
+  }
+  .description-3 {
+    width: 100%;
+    margin-left: 0;
+    font-size: 2.5em;
+  }
+  .full-length-description {
+    font-size: 2em;
+  }
+  .full-length-description-2 {
+    font-size: 2.5em;
+  }
+  .about-categories {
+    width: 100%;
+    padding-left: 0;
+    font-size: 0.7em;
+    margin-top: 3em;
+  }
+  .about-button {
+    width: 100%;
+    margin-top: 2em;
+  }
+  .about-beilage {
+    width: 100%;
+    margin-top: 5em;
+  }
+}
+
+@media only screen and (max-width: 850px) {
   .text-image-container {
     /* display: flex;
     height: 60vh;
     align-items: center; */
     flex-wrap: wrap;
   }
-}
-
-/* @media only screen and (min-width: 700px) {
-  .about-container {
-    font-family: 'acumin-pro';
-    width: 80%;
-    max-width: 80em;
-    padding: 2em;
+  .about-content svg {
+    width: 40%;
+  }
+  .aboutImg-container {
+    width: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-end;
   }
-
-  .about-content {
-    margin-top: 8em;
+  .aboutImg {
+    width: 65%;
+    margin-bottom: 3em;
+    transform: translate(42px, 0);
   }
-
-  #about-title {
-    font-size: 3.8em !important;
+  .aboutImg-2 {
+    display: none;
   }
-
-  #about-description {
-    font-size: 3em !important;
+  .about-description {
+    width: 100%;
+    font-size: 2em;
   }
-
-  .openFormButton {
+  .description-2 {
+    margin-left: 0;
+    font-size: 2.5em;
+    margin-top: 1em;
+    margin-bottom: 0;
+  } 
+  .about-sidenote-container {
+    display: none;
+  }
+  .about-categories {
+    width: 100%;
+    font-size: 0.5em;
+    padding-left: 0;
+  }
+  .full-length-description {
     font-size: 1.5em;
   }
-} */
-
-
-
+  .full-length-description-2 {
+    font-size: 2.5em;
+  }
+  .about-button {
+    width: 100%;
+  }
+  .aboutImg-container-2 {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+  }
+  .aboutImg-3 {
+    display: block;
+    width: 60%;
+    margin-top: 3em;
+    transform: translate(-73px, 0);
+  }
+  .about-sidenote-container-2 {
+    display: flex;
+    width: 72%;
+    align-self: flex-end;
+    margin-bottom: 2em;
+  }
+  .about-beilage svg{
+    width: 100%;
+    margin-top: 0;
+  }
+  .about-beilage p {
+    align-self: center;
+    width: 100%;
+  }
+}
+ 
+@media only screen and (max-width: 650px) {
+  .about-beilage svg {
+    width: 80%;
+  }
+  .about-beilage p {
+    align-self: center;
+    width: 80%;
+    margin-top: -2em;
+  }
+}
