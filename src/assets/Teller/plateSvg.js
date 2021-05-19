@@ -27,7 +27,7 @@ class PlateSvg extends React.Component {
   }
 
   render() {
-    const { text, plate, color, font } = this.props;
+    const { text, plate, color, font, url } = this.props;
     const { height, width, fontSize } = this.state;
     let selectedPlate;
     
@@ -40,6 +40,9 @@ class PlateSvg extends React.Component {
         break;
       case 'plate3':
         selectedPlate = SvgPlate3;
+        break;
+      case 'preStored':
+        selectedPlate = url;
         break;
       default:
         selectedPlate = SvgPlate1;
@@ -55,9 +58,11 @@ class PlateSvg extends React.Component {
          ref={ (divElement) => { this.divElement = divElement } }
          style={{ backgroundImage: `url(${selectedPlate})`, textAlign: 'center', maxWidth: '100%' }}
       > 
-        <div style={{ color: color, fontFamily: font, fontSize: fontSize, textAlign: 'center', width: width}}>
-          {text}
-        </div>
+        { (plate !== 'preStored') && 
+          <div style={{ color: color, fontFamily: font, fontSize: fontSize, textAlign: 'center', width: width}}>
+            {text}
+          </div>
+        }
       </div>
     )
   }

@@ -2,6 +2,7 @@ import React from 'react';
 import Firebase from 'firebase';
 import './Gallery.css';
 import Plate from '../Plate/Plate';
+import PlateImg from '../PlateImg/PlateImg';
 import AufgetischtLogo from '../../assets/aufgetischt_logo.js';
 import BeilageSvg from '../../assets/aufgetischt_beilage_mit_text';
 class Gallery extends React.Component {
@@ -53,7 +54,7 @@ class Gallery extends React.Component {
             url: url,
             preStored: true,
           }
-          else if(url.includes('feminism'))
+          else if(url.includes('feminismus'))
           plateObj = {
             category: 'feminismus',
             url: url,
@@ -164,7 +165,8 @@ class Gallery extends React.Component {
               >
                 <div className='card-body'>
                   { opinions[key].preStored &&
-                    <img className='storedPlate' src={opinions[key].url} />
+                    <PlateImg url={opinions[key].url} category={opinions[key].category} />
+                    // <img className='storedPlate' src={opinions[key].url} />
                   }
                   { !opinions[key].preStored &&
                     <Plate opinion={opinions[key]} />

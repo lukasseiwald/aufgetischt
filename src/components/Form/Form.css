@@ -232,7 +232,6 @@ input[type="number"]:placeholder-shown {
     font-size: 5em;
   }
   .form-categories input[type="radio"] + label {
-    margin: 15px;
     padding: 13px 16px !important;
     font-size: 1.8em !important;
   } 

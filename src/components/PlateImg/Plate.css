@@ -24,8 +24,6 @@
 
 .ReactModal__Content {
   position: unset !important;
-  width: 100%;
-  max-width: 120em;
   height: 80%;
   border: 2px solid black !important;
   inset: 20% 5% !important;
@@ -132,6 +130,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 .card-text {
