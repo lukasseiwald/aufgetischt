@@ -49,7 +49,7 @@ form {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 98%;
+  width: 100%;
   align-items: flex-end;
 }
 
@@ -58,8 +58,8 @@ form {
   font-size: 1.2em;
 }
 
-.form-categories {
-  margin-bottom: 2em;
+.form-header .form-categories {
+  margin-bottom: 4em;
   margin-right: 1em;
   display: flex;
   width: 100%;
