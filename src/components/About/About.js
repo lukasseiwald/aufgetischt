@@ -106,13 +106,15 @@ class About extends React.Component {
             <p className='full-length-description-2'>
               Also tisch uns Deine Meinung auf und vergiss nicht: Dein Tellerrand ist nicht das Ende, es gibt den ganzen Tisch!
             </p>
-            <Link
-              className='button-submit about-button'
-              to={{pathname: '/'}}>
-              <p className='aboutButtonTextMobile'>
-                Ich will auftischen
-              </p>
-            </Link>
+            <div className='text-image-container'>
+              <Link
+                className='button-submit about-button'
+                to={{pathname: '/'}}>
+                <p className='aboutButtonTextMobile'>
+                  Ich will auftischen
+                </p>
+              </Link>
+            </div>
             <div className='beilage-container about-beilage'>
               <SaltPepperSvg />
               <p>
