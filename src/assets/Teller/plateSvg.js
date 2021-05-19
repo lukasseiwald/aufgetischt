@@ -27,7 +27,7 @@ class PlateSvg extends React.Component {
   }
 
   render() {
-    const { text, plate, color, font, url } = this.props;
+    const { text, plate, color, font, url, isPreview } = this.props;
     const { height, width, fontSize } = this.state;
     let selectedPlate;
     
@@ -59,7 +59,7 @@ class PlateSvg extends React.Component {
          style={{ backgroundImage: `url(${selectedPlate})`, textAlign: 'center', maxWidth: '100%' }}
       > 
         { (plate !== 'preStored') && 
-          <div style={{ color: color, fontFamily: font, fontSize: fontSize, textAlign: 'center', width: width}}>
+          <div style={{ color: color, fontFamily: font, fontSize: isPreview ? '1.1em' : '0.7em', width: isPreview ? '80%' : '210px', textAlign: 'center', overflow: isPreview ? 'visible' : 'hidden', }}>
             {text}
           </div>
         }

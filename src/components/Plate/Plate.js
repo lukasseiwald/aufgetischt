@@ -152,7 +152,7 @@ class Plate extends React.Component {
               </Link>
             </div>
             <div className='plate-detail-2'>
-              <PlateSvg text={opinion.text} plate={plate} color={color} font={font} />
+              <PlateSvg text={opinion.text} plate={plate} color={color} font={font} isPreview />
               <button
                 onClick={this.showDetailToggle}
                 className='closeModalButton'
