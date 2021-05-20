@@ -1,6 +1,6 @@
 import React from 'react';
 import Modal from 'react-modal';
-import './Plate.css';
+import './PlateImg.css';
 import PlateSvg from '../../assets/Teller/plateSvg';
 import AufgetischtLogo from '../../assets/aufgetischt_logo.js';
 import {

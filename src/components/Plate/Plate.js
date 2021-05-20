@@ -1,5 +1,5 @@
 import React from 'react';
-import Modal from 'react-modal';
+import ReactModal from 'react-modal';
 import './Plate.css';
 import PlateSvg from '../../assets/Teller/plateSvg';
 import AufgetischtLogo from '../../assets/aufgetischt_logo.js';
@@ -59,6 +59,12 @@ class Plate extends React.Component {
 
   showDetailToggle(event) {
     const { showDetail } = this.state;
+
+    if(!this.state.showDetail){
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
 
     this.setState({
       showDetail: !showDetail,
@@ -132,9 +138,13 @@ class Plate extends React.Component {
           onClick={this.showDetailToggle}>
           <PlateSvg text={opinion.text} plate={plate} color={color} font={font} />
         </button>
-        <Modal 
-           isOpen={showDetail}
-           contentLabel='Teller Details'
+        <ReactModal 
+          isOpen={showDetail}
+          shouldCloseOnOverlayClick={true}
+          shouldCloseOnEsc={true}
+          onRequestClose={() => {
+            this.showDetailToggle();
+          }}
         >
           <div className='plate-detail'>
             <div className='plate-detail-1'>
@@ -165,7 +175,7 @@ class Plate extends React.Component {
               </button>
             </div>
           </div>
-        </Modal>
+        </ReactModal>
         {/* {showDetail && 
           <div className='plate-detail'>
             <div className='plate-detail-body'>
