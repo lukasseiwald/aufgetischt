@@ -50,6 +50,6 @@ body {
 }
 
 @font-face {
-  font-family: 'Komu-A.ttf';
-  src: local('Komu-A.ttf'), url(./fonts/VampiroOne-Regular.ttf) format('truetype');
+  font-family: 'Komu-A';
+  src: local('Komu-A.ttf'), url(./fonts/Komu-A.ttf) format('truetype');
 }

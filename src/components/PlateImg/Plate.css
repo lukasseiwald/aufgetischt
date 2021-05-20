@@ -154,7 +154,7 @@
 
 @media only screen and (max-height: 700px) {
   .plate-detail-1 p:nth-child(2) {
-    font-size: 0.35em !important;
+    /* font-size: 0.55em !important; */
     margin-bottom: 3em;
   }
   .nachschlag p {
@@ -202,7 +202,6 @@
 
   .plate-detail-1 p {
     width: 100%;
-    font-size: 0.35em;
   }
 
   .plate-detail-2 {
