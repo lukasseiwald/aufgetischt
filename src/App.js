@@ -1,20 +1,20 @@
-// import logo from './logo.svg';
+import logo from './logo.svg';
 import './App.css';
-// import {
-//   BrowserRouter,
-//   Switch,
-//   Route,
-// } from 'react-router-dom';
+import {
+  BrowserRouter,
+  Switch,
+  Route,
+} from 'react-router-dom';
 
-// import Form from './components/Form/Form';
-// import Gallery from './components/Gallery/Gallery';
-// import TriggerWarning from './components/TriggerWarning/TriggerWarning';
-// import About from './components/About/About';
-// import Impressum from './components/Impressum/Impressum';
-// import Data from './components/Data/Data';
-// import Footer from './components/Footer/Footer';
-// import ScrollToTop from './components/ScrollToTop/ScrollToTop';
-import GoodBye from './components/GoodBye/GoodBye';
+import Form from './components/Form/Form';
+import Gallery from './components/Gallery/Gallery';
+import TriggerWarning from './components/TriggerWarning/TriggerWarning';
+import About from './components/About/About';
+import Impressum from './components/Impressum/Impressum';
+import Data from './components/Data/Data';
+import Footer from './components/Footer/Footer';
+import ScrollToTop from './components/ScrollToTop/ScrollToTop';
+// import GoodBye from './components/GoodBye/GoodBye';
 
 
 function App() {
@@ -22,8 +22,8 @@ function App() {
 
   return (
     <div className='App'>
-      <GoodBye />
-      {/* <BrowserRouter>
+      {/* <GoodBye /> */}
+      <BrowserRouter>
         <ScrollToTop />
         <Switch>
           <Route exact path='/'>
@@ -57,7 +57,7 @@ function App() {
             </div>
           </Route>
         </Switch>
-      </BrowserRouter> */}
+      </BrowserRouter>
     </div>
   );
 }

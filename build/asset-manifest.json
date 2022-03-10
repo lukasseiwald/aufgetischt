@@ -1,24 +1,34 @@
 {
   "files": {
-    "main.css": "/static/css/main.183b83f7.chunk.css",
-    "main.js": "/static/js/main.64732b9a.chunk.js",
-    "main.js.map": "/static/js/main.64732b9a.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.894ea69e.js",
-    "runtime-main.js.map": "/static/js/runtime-main.894ea69e.js.map",
-    "static/js/2.19e2f203.chunk.js": "/static/js/2.19e2f203.chunk.js",
-    "static/js/2.19e2f203.chunk.js.map": "/static/js/2.19e2f203.chunk.js.map",
-    "static/js/3.6ab80be5.chunk.js": "/static/js/3.6ab80be5.chunk.js",
-    "static/js/3.6ab80be5.chunk.js.map": "/static/js/3.6ab80be5.chunk.js.map",
+    "main.css": "/static/css/main.9fbb3aba.chunk.css",
+    "main.js": "/static/js/main.af1caa6f.chunk.js",
+    "main.js.map": "/static/js/main.af1caa6f.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.e06cea04.js",
+    "runtime-main.js.map": "/static/js/runtime-main.e06cea04.js.map",
+    "static/js/2.65f4f733.chunk.js": "/static/js/2.65f4f733.chunk.js",
+    "static/js/2.65f4f733.chunk.js.map": "/static/js/2.65f4f733.chunk.js.map",
+    "static/js/3.25159d28.chunk.js": "/static/js/3.25159d28.chunk.js",
+    "static/js/3.25159d28.chunk.js.map": "/static/js/3.25159d28.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.183b83f7.chunk.css.map": "/static/css/main.183b83f7.chunk.css.map",
-    "static/js/2.19e2f203.chunk.js.LICENSE.txt": "/static/js/2.19e2f203.chunk.js.LICENSE.txt",
+    "static/css/main.9fbb3aba.chunk.css.map": "/static/css/main.9fbb3aba.chunk.css.map",
+    "static/js/2.65f4f733.chunk.js.LICENSE.txt": "/static/js/2.65f4f733.chunk.js.LICENSE.txt",
     "static/media/index.css": "/static/media/VampiroOne-Regular.5b9f2556.ttf",
-    "static/media/studiostoerungLogo.e49afbfb.png": "/static/media/studiostoerungLogo.e49afbfb.png"
+    "static/media/AufgetischtFragile_Neonpink.ce1ed4be.png": "/static/media/AufgetischtFragile_Neonpink.ce1ed4be.png",
+    "static/media/aboutButton.d092756c.png": "/static/media/aboutButton.d092756c.png",
+    "static/media/aufegtischt_Pfeil_klein.e423f791.png": "/static/media/aufegtischt_Pfeil_klein.e423f791.png",
+    "static/media/aufgetischt_Pfeil.0a8e47ac.png": "/static/media/aufgetischt_Pfeil.0a8e47ac.png",
+    "static/media/aufgetischt_about_01.516bcdb6.gif": "/static/media/aufgetischt_about_01.516bcdb6.gif",
+    "static/media/aufgetischt_about_02.8dbe4a48.png": "/static/media/aufgetischt_about_02.8dbe4a48.png",
+    "static/media/fh_salzburg.26897587.png": "/static/media/fh_salzburg.26897587.png",
+    "static/media/logo.6ce24c58.svg": "/static/media/logo.6ce24c58.svg",
+    "static/media/teller_1.975042c2.svg": "/static/media/teller_1.975042c2.svg",
+    "static/media/teller_2.4ad26d2f.svg": "/static/media/teller_2.4ad26d2f.svg",
+    "static/media/teller_3.bd958b7d.svg": "/static/media/teller_3.bd958b7d.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.894ea69e.js",
-    "static/js/2.19e2f203.chunk.js",
-    "static/css/main.183b83f7.chunk.css",
-    "static/js/main.64732b9a.chunk.js"
+    "static/js/runtime-main.e06cea04.js",
+    "static/js/2.65f4f733.chunk.js",
+    "static/css/main.9fbb3aba.chunk.css",
+    "static/js/main.af1caa6f.chunk.js"
   ]
 }

@@ -102,7 +102,7 @@ class Footer extends React.Component {
             className='flex-row-item small-row column-flex'
             id='copyright-section'
           >
-            <p>Copyright © 2021 aufgetischt</p>
+            <p>Copyright © 2022 aufgetischt</p>
             <div className='row-flex'>
               <p>Eine Intervention von </p>
               <a href='https://www.instagram.com/studiostoerung/' target='_blank' rel='noreferrer' className='link-to-instagram'>
